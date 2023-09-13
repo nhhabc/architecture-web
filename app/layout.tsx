@@ -1,4 +1,8 @@
-import './globals.css'
+// import './globals.css'
+"use client";
+import baseTheme from '@/chakra-ui/theme'
+import Navbar from '@/components/layout/Navbar';
+import { ChakraProvider } from '@chakra-ui/react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -16,7 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ChakraProvider theme={baseTheme}>
+          <Navbar/>
+          {children}
+        </ChakraProvider>
+      </body>
     </html>
   )
 }

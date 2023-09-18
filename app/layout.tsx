@@ -7,6 +7,7 @@ import type { Metadata } from 'next'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../public/css/slider.css"
+import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -24,6 +25,7 @@ export default function RootLayout({
         <ChakraProvider theme={baseTheme}>
           <Navbar/>
           {children}
+          <Footer/>
         </ChakraProvider>
       </body>
     </html>

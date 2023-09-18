@@ -1,3 +1,4 @@
+import { fontMontserrat } from '@/app/fonts';
 import { colors } from './colors';
 import { extendTheme, useBreakpointValue } from "@chakra-ui/react";
 
@@ -10,8 +11,7 @@ const baseTheme = extendTheme({
       return {
         "html, body": {
           boxSizing: "border-box",
-          // fontSize: isMobileBreakpoint ? "sm" : "md",
-          fontFamily: `Arial`,
+          fontFamily: fontMontserrat.style.fontFamily,
           color: "ast.3",
           bgColor: "ast.4",
         },

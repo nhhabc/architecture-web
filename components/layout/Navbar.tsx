@@ -41,7 +41,7 @@ const NavItem = ({data}: NavProps) => {
 
 
   return (
-    <Flex color={"rgba(255,255,255,1)"} px={"10px"} py={"5px"} fontSize={"14px"} fontWeight={600} textTransform={'uppercase'} fontFamily={`"Montserrat",Sans-serif`} pos={'relative'} ref={navItemRef}>
+    <Flex color={"rgba(255,255,255,1)"} px={"10px"} py={"5px"} fontSize={"14px"} fontWeight={600} textTransform={'uppercase'} pos={'relative'} ref={navItemRef}>
       <Link href={data.src}>
         <Text transition={".4s"} _hover={{transform: "scale(1.2)"}} onMouseEnter={() => {
           setTimeout(() => {

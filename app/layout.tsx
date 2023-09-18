@@ -4,12 +4,9 @@ import baseTheme from '@/chakra-ui/theme'
 import Navbar from '@/components/layout/Navbar';
 import { ChakraProvider } from '@chakra-ui/react'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../public/css/slider.css"
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -23,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <ChakraProvider theme={baseTheme}>
           <Navbar/>
           {children}

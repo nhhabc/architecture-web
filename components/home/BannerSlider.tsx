@@ -1,4 +1,3 @@
-'use client'
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 import { Box, Flex, Image } from '@chakra-ui/react'
 import React from 'react'
@@ -6,9 +5,10 @@ import Slider from "react-slick";
 
 const BannerSlider = () => {
   return (
-    <Box position={'relative'} w={"100%"} outline={'none'} height={"100vh"} overflowX={'hidden'} className='home-slider'>
+    <Box position={'relative'} w={"100%"} outline={'none'} height={"100vh"} overflowX={'hidden'} className='home-slider'
+      overflow={'hidden'}>
       {imgSlider.length != 0 && 
-      <Slider infinite={true} speed={500} slidesToScroll={1} slidesToShow={1} dots={true} arrows={true}
+      <Slider infinite={true} speed={500} slidesToScroll={1} slidesToShow={1} dots={true} arrows={true} fade
         appendDots={(dots) => (
           <Box pos={"absolute"} top={"94%"}>
             {dots}

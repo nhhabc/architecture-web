@@ -13,6 +13,7 @@ const Footer = () => {
       flexDir={"column"}
       position={"relative"}
       w={"100%"}
+      mt={300}
     >
       <Box
         position={"absolute"}
@@ -25,6 +26,7 @@ const Footer = () => {
         bgRepeat={"no-repeat"}
         bgSize={"cover"}
       >
+
         {/* <Box bgColor={"#000"} opacity={".7"} pos={"absolute"} top={0} left={0} w={"100%"} h={"100%"}></Box> */}
         <Flex justifyContent={"space-around"} alignItems={"center"} height={"100%"} flexDir={["column", "column","column","row"]}>
           <Text

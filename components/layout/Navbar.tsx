@@ -2,12 +2,48 @@ import { useOutsideHover } from '@/hook/useOutsideHandler'
 import { Flex, Center, Image, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const Navbar = () => {
+  const [show, setShow] = useState(true);
+  const [changeStyle, setChangeStyle] = useState(false)
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') { 
+      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        setShow(false); 
+      } else { // if scroll up show the navbar
+        setShow(true);  
+      }
+
+      if (window.scrollY > 250 ) {
+        setChangeStyle(true)
+      }else{
+        setChangeStyle(false)
+      }
+
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY); 
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
+
+
   return (
-    <Flex w={"100%"} transition={"all .6s"} pos={'fixed'} bgColor={"transparent"} bgGradient={"linear(to-b, #424242BA, #FFFFFF00)"}
-      px={"40px"} zIndex={1000}>
+    <Flex w={"100%"} transition={"all .6s"} pos={'fixed'} bgColor={changeStyle ? "#0000004d" : "transparent"} bgGradient={"linear(to-b, #424242BA, #FFFFFF00)"}
+      px={"40px"} zIndex={1000} backdropFilter={changeStyle ? "blur(15px)" : undefined} transform={show ? "translateY(0)" : "translateY(-100%)"}>
       <Flex minW={"70px"} alignItems={'center'} mx={'auto'} w={"100%"}>
         <Flex w={"15%"}>
           <Center p={"10px"} w={"100%"}>

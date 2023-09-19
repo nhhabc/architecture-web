@@ -205,8 +205,21 @@ const IntroducePage = () => (
       </Grid>
     </Flex>
 
-    <Flex >
+    <Flex bgImage={bg1.src} bgRepeat={"no-repeat"} bgSize={"cover"} h={"206px"} justifyContent={"center"} alignItems={"center"} mt={10}>
       <Text textTransform={"uppercase"} fontSize={"36pt"} fontWeight={700} color={"#fff"} >Dịch vụ</Text>
+    </Flex>
+
+    <Flex bgImage={"./images/O9FI7N.jpg"} bgSize={"cover"} bgRepeat={"no-repeat"} h={"520px"} >
+          <Grid templateColumns={"repeat(3, 1ft)"} gap={8} display={"flex"} p={"40px 80px"}>
+                {serviceDummy.map((item, i) => (
+                  <Flex key={i} flexDir={"column"} justifyContent={"center"} alignItems={"center"}>
+                    <Image boxSize={50} src={item.img} alt="gift" />
+                    <Text fontSize={"18pt"} color={"global.primary"} fontWeight={700} textTransform={"uppercase"}>{item.title}</Text>
+                    <Text textAlign={"center"}>{item.des}</Text>
+                  </Flex>
+                ))}
+          </Grid>
+
     </Flex>
   </Flex>
 );
@@ -234,3 +247,21 @@ const dataDummy = [
     des: "Lấy con người làm tâm phát triển. Chúng tôi luôn đánh giá cao giá trị của mỗi cá thể, khích lệ phát triển nội lực tiềm ẩn trong mỗi con người. Từ tư tưởng cốt lõi đó, mỗi cá nhân phát triển tâm-trí-lực toàn diện và cùng nhau làm nên một tập thể đoàn kết của những con người nội lực mạnh mẽ.",
   },
 ];
+const serviceDummy = [
+  {
+    img:"./images/design-teamf1.png",
+    title:"Tư vấn thiết kế",
+    des:"Thiết kế Kiến trúc – Cảnh quan – Nội thất với tất cả sự thấu hiểu nhu cầu, thói quen sinh hoạt, tính cách,… của khách hàng, bên cạnh đó đảm bảo cân bằng giữa yêu cầu công năng với yếu tố thẩm mỹ."
+  },
+  {
+    img:"./images/architectf1.png",
+    title:"THIẾT KẾ – THI CÔNG TRỌN GÓI",
+    des:"Dịch vụ thi công trọn gói giúp khách hàng tiết kiệm nhiều thời gian và nguồn vốn, tối ưu hóa các nguồn lực và tăng cường kiểm tra giám sát, đảm bảo chất lượng dẫn đầu"
+  },
+  {
+    img:"./images/workersf1.png",
+    title:"THI CÔNG XÂY DỰNG",
+    des:"Cung cấp giải pháp mang đến sự tối ưu về thời gian thi công và vật liệu xây dựng. Chất lượng hoàn thiện chỉn chu, thi công đúng theo thiết kế."
+  },
+
+]

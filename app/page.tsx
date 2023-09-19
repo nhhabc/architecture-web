@@ -1,8 +1,12 @@
 "use client";
 import BannerSlider from "@/components/home/BannerSlider";
 import CompanyPreview from "@/components/home/CompanyPreview";
+import CompletedProject from "@/components/home/CompletedProject";
 import ImageAnimation from "@/components/home/ImageAnimation";
 import MainCategory from "@/components/home/MainCategory";
+import ProductPreview from "@/components/home/ProductPreview";
+import TopProductSection from "@/components/home/TopProductSection";
+import VideoPreview from "@/components/home/VideoPreview";
 import { Box } from "@chakra-ui/react";
 
 export default function Home() {
@@ -13,6 +17,10 @@ export default function Home() {
       <CompanyPreview/>
       <ImageAnimation/>
       <MainCategory/>
+      <ProductPreview/>
+      <TopProductSection/>
+      <CompletedProject/>
+      <VideoPreview/>
     </>
   )
 }

@@ -8,6 +8,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../public/css/slider.css"
 import Footer from '@/components/layout/Footer';
+import { Provider } from 'react-redux';
+import { store } from '@/redux/store';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,11 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Provider store={store}>
         <ChakraProvider theme={baseTheme}>
           <Navbar/>
           {children}
           <Footer/>
         </ChakraProvider>
+        </Provider>
       </body>
     </html>
   )

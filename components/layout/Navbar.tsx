@@ -1,7 +1,7 @@
 import { useOutsideHover } from '@/hook/useOutsideHandler'
 import { Flex, Center, Image, Text } from '@chakra-ui/react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import React, { useEffect, useRef, useState } from 'react'
 
 const Navbar = () => {
@@ -69,7 +69,7 @@ export default Navbar
 const NavItem = ({data}: NavProps) => {
   const navItemRef = useRef(null)
   const [isDropdown, setIsDropdown] = useState(false);
-  // const router = useRouter()
+  const router = useRouter()
   
   const disableDropdown = () => {
     setIsDropdown(false)
@@ -83,15 +83,15 @@ const NavItem = ({data}: NavProps) => {
 
   return (
     <Flex color={"rgba(255,255,255,1)"} px={"10px"} py={"5px"} fontSize={"14px"} fontWeight={600} textTransform={'uppercase'} pos={'relative'} ref={navItemRef}>
-      <Link href={data.src}>
-        <Text transition={".4s"} _hover={{transform: "scale(1.2)"}} onMouseEnter={() => {
-          setTimeout(() => {
-            setIsDropdown(true)
-          }, 300)
-        }}>
-          {data.value}
-        </Text>
-      </Link>
+      <Text transition={".4s"} _hover={{transform: "scale(1.2)"}} cursor={data?.src ? 'pointer' : undefined}
+      onClick={() => data?.src && router.push(data.src)}
+      onMouseEnter={() => {
+        setTimeout(() => {
+          setIsDropdown(true)
+        }, 300)
+      }}>
+        {data.value}
+      </Text>
       {data?.dropdown && 
       <Flex pos={'absolute'} w={"fit-content"} top={"100%"} left={"-1px"} bgColor={"rgba(0,0,0,0.85)"} flexDir={'column'} whiteSpace={'nowrap'} display={isDropdown ? 'block' : "none"}>
         {data.dropdown.map((item: any, i: string) => (
@@ -117,17 +117,19 @@ const navItemsDummy = [
     {value: 'Người Biscons', src:"/introduce/human"},
     {value: 'CEO Bùi Trường An - "Người đỡ đầu"',  src:"/introduce/sponsor"},
   ]},
-  {value: "Dự án thiết kế", src: "/", dropdown: [
-    {value: 'Biệt thự hiện đại', src:"/"},
-    {value: 'Văn phòng', src:"/"},
-    {value: 'CAFE - SPA - Nhà hàng - Khách sạn', src:"/"},
+  {value: "Dự án thiết kế", src: "/architecture-project", dropdown: [
+    {value: 'Biệt thự hiện đại', src:"/architecture-project/model-villa"},
+    {value: 'Nhà phố hiện đại', src:"/architecture-project/model-house"},
+    {value: 'Văn phòng', src:"/architecture-project/office"},
+    {value: 'CAFE - SPA - Nhà hàng - Khách sạn', src:"/architecture-project/cafe-spa-restaurant-hotel"},
   ]},
-  {value: "Dự án thi công", src: "/", dropdown: [
-    {value: 'Biệt thự', src:"/" },
-    {value: 'Văn phòng', src:"/"},
-    {value: 'CAFE - SPA - Nhà hàng - Khách sạn', src:"/"},
+  {value: "Dự án thi công", src: "/construction-project", dropdown: [
+    {value: 'Biệt thự', src:"/construction-project/villa" },
+    {value: 'Nhà phố', src:"/construction-project/house" },
+    {value: 'Văn phòng', src:"/construction-project/office"},
+    {value: 'CAFE - SPA - Nhà hàng - Khách sạn', src:"/construction-project/cafe-spa-restaurant-hotel"},
   ]},
-  {value: "Dịch vụ", src: "/", dropdown: [
+  {value: "Dịch vụ", dropdown: [
     {value: 'Dịch vụ thiết kế', src:"/"},
     {value: 'Dịch vụ thi công', src:"/"},
     {value: 'Tư vấn giám sát', src:"/"},

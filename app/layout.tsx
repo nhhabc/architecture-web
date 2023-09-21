@@ -7,6 +7,7 @@ import type { Metadata } from 'next'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../public/css/slider.css"
+import "../public/css/index.css"
 import Footer from '@/components/layout/Footer';
 import { Provider } from 'react-redux';
 import { store } from '@/redux/store';

@@ -1,6 +1,7 @@
 import { useOutsideHover } from '@/hook/useOutsideHandler'
 import { Flex, Center, Image, Text } from '@chakra-ui/react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React, { useEffect, useRef, useState } from 'react'
 
 const Navbar = () => {
@@ -68,6 +69,7 @@ export default Navbar
 const NavItem = ({data}: NavProps) => {
   const navItemRef = useRef(null)
   const [isDropdown, setIsDropdown] = useState(false);
+  // const router = useRouter()
   
   const disableDropdown = () => {
     setIsDropdown(false)
@@ -75,6 +77,7 @@ const NavItem = ({data}: NavProps) => {
 
   useOutsideHover(navItemRef , disableDropdown)
 
+  console.log(navItemsDummy);
   
 
 
@@ -116,7 +119,6 @@ const navItemsDummy = [
   ]},
   {value: "Dự án thiết kế", src: "/", dropdown: [
     {value: 'Biệt thự hiện đại', src:"/"},
-    {value: 'Nhà phố hiện đại', src:"/"},
     {value: 'Văn phòng', src:"/"},
     {value: 'CAFE - SPA - Nhà hàng - Khách sạn', src:"/"},
   ]},

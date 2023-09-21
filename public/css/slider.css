@@ -39,3 +39,27 @@
 .news-slider ul .slick-active {
   background-color: #223B5F !important;
 }
+
+
+
+
+
+.introduce-slider .slick-dots li button:before {
+  display: none;
+}
+.introduce-slider .slick-dots li button {
+  width: 100%;
+  margin: 0;
+  height: 4px;
+}
+
+.introduce-slider .slick-dots li {
+  background-color: #223b5f38;
+  height: 4px;
+  width: 120px;
+}
+
+.introduce-slider ul .slick-active {
+  background-color: #223B5F !important;
+}
+

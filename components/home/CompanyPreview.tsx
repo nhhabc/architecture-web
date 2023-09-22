@@ -6,10 +6,11 @@ import React from 'react'
 const CompanyPreview = () => {
   return (
     <Flex py={"60px"} zIndex={2} flexDir={"column"}>
-      <Flex pos={'relative'} w={"65%"} pl={"80px"} flexDir={'column'}>
-        <Flex w={"100%"}>
-          <Flex w={"40%"}>
-            <Center>
+      <Flex pos={'relative'} w={"65%"} pl={["40px","40px","40px","80px"]} flexDir={'column'}>
+        <Flex w={"100%"} flexDir={['column','column','column','row']}>
+          <Flex w={"40%"} >
+            <Center flexDir={['column','column','column','row']}
+              alignItems={["flex-start","flex-start","flex-start","flex-start"]}>
               <Box fontFamily={fontBankGothic.style.fontFamily} fontSize={"75px"} fontWeight={400} color={"global.secondary"} mr={"40px"}>
                 37
               </Box>
@@ -20,7 +21,7 @@ const CompanyPreview = () => {
             </Center>
           </Flex>
           <Flex w={"60%"}>
-            <Center>
+            <Center flexDir={['column','column','column','row']}>
               <Box fontFamily={fontBankGothic.style.fontFamily} fontSize={"75px"} fontWeight={400} color={"global.secondary"} mr={"40px"}>
                 500+
               </Box>

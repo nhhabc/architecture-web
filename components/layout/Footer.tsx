@@ -13,7 +13,7 @@ const Footer = () => {
       flexDir={"column"}
       position={"relative"}
       w={"100%"}
-      mt={"250px"}
+      mt={["300px","300px","300px","250px"]}
     >
       <Box
         position={"absolute"}

@@ -7,17 +7,41 @@ import biscons_team from "../../public/images/kien-truc-biscons.jpg";
 import Slider from "react-slick";
 import btn_up from "../../public/images/blue-button-up.svg";
 import bg1 from "../../public/images/bg1.png";
-import bs1 from "../../public/images/introduce1.png";
-import bs2 from "../../public/images/introduce2.png";
-import bs3 from "../../public/images/introduce3.jpg";
-import bs4 from "../../public/images/introduce4.jpg";
-import bs5 from "../../public/images/introduce5.jpg";
-import bs6 from "../../public/images/introduce6.jpg";
-import bs7 from "../../public/images/introduce7.jpg";
-import bs8 from "../../public/images/introduce8.jpg";
-import bs9 from "../../public/images/introduce9.jpg";
 import bs10 from "../../public/images/introduce10.jpg";
-import {FaCaretDown} from "react-icons/fa"
+import { FaCaretDown } from "react-icons/fa";
+import CoreValue from "./CoreValue";
+import HistoryBegins from "./HistoryBegins";
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToScroll: 1,
+  slidesToShow: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        dots: false,
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        dots: false,
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        dots: false,
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
 
 const IntroducePage = () => (
   <Flex flexDir={"column"}>
@@ -54,7 +78,7 @@ const IntroducePage = () => (
       w={"100%"}
       h={"470px"}
       pos={"relative"}
-      p={"60px 80px 60px 80px"}
+      p={["60px 10px", "60px 10px", "60px 40px", "60px 80px"]}
       justifyContent={"center"}
       alignItems={"center"}
     >
@@ -99,7 +123,7 @@ const IntroducePage = () => (
     </Flex>
     <Flex
       flexDir={"column"}
-      p={["40px 80px", "40px 80px", "40px 40px", "40px 80px"]}
+      p={["40px 10px", "40px 80px", "40px 40px", "40px 80px"]}
     >
       <Grid
         templateColumns={[
@@ -159,7 +183,7 @@ const IntroducePage = () => (
       <Grid
         templateColumns={[
           "repeat(1, 1fr)",
-          "repeat(2, 1fr)",
+          "repeat(1, 1fr)",
           "repeat(1, 1fr)",
           "repeat(2, 1fr)",
         ]}
@@ -168,75 +192,14 @@ const IntroducePage = () => (
         <Flex>
           <Image
             src={biscons_team.src}
-            maxW={"870px"}
-            maxH={"590px"}
+            w={["100%", "100%", "100%", "870px"]}
+            h={["100%", "100%", "590px", "590px"]}
             objectFit={"cover"}
             alt="gift"
           />
         </Flex>
-        <Flex
-          flexDir={"column"}
-          justifyContent={"center"}
-          alignItems={"flex-start"}
-          margin={"auto"}
-        >
-          <Text
-            color={"global.primary"}
-            fontSize={"28px"}
-            fontWeight={800}
-            textTransform={"uppercase"}
-            mb={2}
-          >
-            Giá trị cốt lõi
-          </Text>
-
-          <Box bg={"#fff"} w={"653px"} h={"170px"} pos={"relative"}>
-            <Slider
-              dots={false}
-              infinite={true}
-              speed={500}
-              slidesToScroll={1}
-              slidesToShow={1}
-              nextArrow={
-                <Image
-                  boxSize={"50px"}
-                  transform={"rotate(90deg)"}
-                  pos={"absolute"}
-                  top={"180px"}
-                  left={14}
-                  src={btn_up.src}
-                  alt="gift"
-                />
-              }
-              prevArrow={
-                <Image
-                  boxSize={"50px"}
-                  transform={"rotate(-90deg)"}
-                  pos={"absolute"}
-                  top={"180px"}
-                  left={0}
-                  src={btn_up.src}
-                  alt="gift"
-                />
-              }
-            >
-              {dataDummy.map((item, i) => (
-                <Box key={i} p={"10px"}>
-                  <Text
-                    color={"global.primary"}
-                    fontSize={"24px"}
-                    fontWeight={800}
-                    textTransform={"uppercase"}
-                    letterSpacing={"2.4px"}
-                  >
-                    {item.title}
-                  </Text>
-                  <Text>{item.des}</Text>
-                </Box>
-              ))}
-            </Slider>
-          </Box>
-        </Flex>
+        <CoreValue />
+        
       </Grid>
     </Flex>
     <Flex
@@ -261,16 +224,20 @@ const IntroducePage = () => (
       bgImage={"./images/O9FI7N.jpg"}
       bgSize={"cover"}
       bgRepeat={"no-repeat"}
-      h={"520px"}
+      h={["fit-content", "fit-content", "520px", "520px"]}
       justifyContent={"center"}
       pos={"relative"}
     >
       {/* <Box bgColor={"#fff"} opacity={.2} pos={"absolute"} top={0} left={0} w={"100%"} h={"100%"}></Box> */}
       <Grid
-        templateColumns={"repeat(3, 1ft)"}
+        templateColumns={[
+          "repeat(1, 1fr)",
+          "repeat(1, 1fr)",
+          "repeat(3, 1fr)",
+          "repeat(3, 1fr)",
+        ]}
         gap={8}
-        display={"flex"}
-        p={"40px 80px"}
+        p={["40px 10px","40px 80px","40px 80px","40px 80px"]}
       >
         {serviceDummy.map((item, i) => (
           <Flex
@@ -287,6 +254,7 @@ const IntroducePage = () => (
               fontWeight={700}
               textTransform={"uppercase"}
               mt={3}
+              textAlign={"center"}
             >
               {item.title}
             </Text>
@@ -297,238 +265,179 @@ const IntroducePage = () => (
         ))}
       </Grid>
     </Flex>
+    
+    <HistoryBegins />
+
     <Flex
-      justifyContent={"center"}
       flexDir={"column"}
-      p={["20px 40px", "20px 40px", "20px 40px", "20px 80px"]}
+      justifyContent={"center"}
+      alignItems={"center"}
+      mt={10}
     >
       <Text
-        p={"40px 80px 20px"}
-        textAlign={"center"}
-        textTransform={"uppercase"}
-        fontSize={"40px"}
-        fontWeight={600}
+        fontSize={["26pt","36pt","36pt","36pt"]}
         color={"#000"}
+        fontWeight={700}
+        textTransform={"uppercase"}
       >
-        Lịch sử hình thành
+        meet our team
       </Text>
       <Flex>
-        <Flex w={"20%"}>
-          <Flex flexDir={"column"} alignItems={"center"}>
-            <Text transform={"rotate(90deg)"} mb={5}>
-              01/03
-            </Text>
-            <Box
-              className="timeline__line"
-              pos={"relative"}
-              h={"50vh"}
-              w={"2px"}
-              backgroundColor={"rgba(0,0,0,.2)"}
-              mb={2}
-            ></Box>
+        <FaCaretDown fontSize={"123px"} color={"#223b5f"} />
+      </Flex>
+      <Flex bg={"#fff"} w={"100%"} justifyContent={"center"}>
+        <Flex
+          maxW={"1250px"}
+          borderRadius={"15px"}
+          boxShadow={"0 0 10px 0 rgba(0,0,0,.5);"}
+          p={"10px"}
+          flexDir={["column","column","row","row"]}
+        >
+          <Flex w={["100%","45%","45%","45%"]}>
             <Image
-              mb={2}
-              boxSize={"50px"}
-              transform={"rotate(0deg)"}
-              src={btn_up.src}
-              alt="gift"
-            />
-            <Image
-              boxSize={"50px"}
-              transform={"rotate(180deg)"}
-              src={btn_up.src}
+              w={["100%","595px","595px","595px"]}
+              h={["100%","794px","794px","794px"]}
+              objectFit={"cover"}
+              src={bs10.src}
               alt="gift"
             />
           </Flex>
-          <Flex flexDir={"column"} mt={20}>
-            <Text mb={"30px"} color={"#000"} fontWeight={600}>
-              Khởi điểm
+          <Flex flexDir={"column"} w={["100%","55%","55%","55%"]} p={"40px"}>
+            <Text sx={titleStyle}> + founder</Text>
+            <Text
+              color={"#000"}
+              fontSize={"28px"}
+              fontWeight={700}
+              textTransform={"uppercase"}
+            >
+              {" "}
+              Bùi trường an
             </Text>
-            <Text mb={"30px"} color={"#ccc"} fontWeight={600}>
-              Phát triển
-            </Text>
-            <Text color={"#ccc"} fontWeight={600}>
-              Hiện tại
-            </Text>
-          </Flex>
-        </Flex>
-        <Flex w={"80%"} flexDir={"column"}>
-          <Flex flexDir={"column"}>
-            <Text sx={headStyle}>Khởi điểm</Text>
-            <Text color={"global.text"} ml={5} mt={5}>
-              Tháng 4 năm 2017, Nền móng đầu tiên của Biscons được hình thành
-              với tiền thân là một dự án khởi nghiệp với mô hình văn phòng thiết
-              kế, kết hợp đào tạo phần mềm kiến trúc. Văn phòng đầu tiên được
-              đặt tại một căn hộ nhỏ vỏn vẹn 50m2 Khu đô thị Xala – Hà Nội.
-            </Text>
-            <Image
-              mt={5}
-              w={"100%"}
-              h={"100%"}
-              objectFit={"contain"}
-              src={bs1.src}
-              alt="gift"
-            />
-            <Image
-              mt={5}
-              w={"100%"}
-              h={"100%"}
-              objectFit={"contain"}
-              src={bs2.src}
-              alt="gift"
-            />
-            <Text color={"global.text"} ml={5} mt={5}>
-              Các dự án của công ty lúc bấy giờ chỉ là thiết kế các căn chung cư
-              nhỏ, với nòng cốt là đội ngũ thiết kế được đào tạo từ trung tâm
-              phần mềm Biscons. Sau 1 năm thành lập và trải qua không ít biến cố
-              và khó khăn, công ty chuyển trụ sở về P.306 – Tòa nhà FLC 418
-              Quang Trung, Hà Đông, đây chính là cột mốc đánh dấu những bước
-              ngoặt, thay đổi to lớn của công ty về sau.
-            </Text>
-          </Flex>
-          <Flex flexDir={"column"}>
-            <Text sx={headStyle}>Phát triển</Text>
-            <Flex ml={5} mt={5} flexDir={"column"}>
-              <Text>
-                6 năm phát triển vừa qua, tuy là một chặng đường không quá dài
-                để đánh giá, tuy nhiên công ty cũng đã đạt được không ít thành
-                tựu và cột mốc mới trong quá trình phát triển:
-              </Text>
-              <Text mt={5}>
-                {" "}
-                <span style={{ color: "#000", fontWeight: 700 }}>
-                  Năm 2019:
-                </span>{" "}
-                bắt đầu triển khai mảng thi công xây dựng. Trong năm này, tốc độ
-                tăng trưởng đạt 700%.
-              </Text>
-              <Text>
-                <span style={{ color: "#000", fontWeight: 700 }}>10/2019:</span>{" "}
-                Công ty bắt đầu khai thác thị trường miền Nam vời các dự án đầu
-                tiên thiết kế thi công nội thất cho chuỗi khách sạn Cozrum.
-              </Text>
-            </Flex>
-            <Image
-              mt={5}
-              w={"100%"}
-              h={"100%"}
-              objectFit={"contain"}
-              src={bs3.src}
-              alt="gift"
-            />
-            <Image
-              mt={5}
-              w={"100%"}
-              h={"100%"}
-              objectFit={"contain"}
-              src={bs4.src}
-              alt="gift"
-            />
-            <Image
-              mt={5}
-              w={"100%"}
-              h={"100%"}
-              objectFit={"contain"}
-              src={bs5.src}
-              alt="gift"
-            />
-            <Image
-              mt={5}
-              w={"100%"}
-              h={"100%"}
-              objectFit={"contain"}
-              src={bs6.src}
-              alt="gift"
-            />
 
-            <Flex flexDir={"column"} ml={5} mt={10}>
+            <Text sx={titleStyle} mt={10}>
+              {" "}
+              + bio
+            </Text>
+            <Text fontWeight={700} color={"#000"}>
+              Hanoi Architectural University
+            </Text>
+            <Text mt={5} fontWeight={700} color={"#000"}>
+              Languages: Vietnamese – English
+            </Text>
+            <Flex flexDir={"column"} mt={10}>
               <Text>
-                <span style={{ color: "#000", fontWeight: 700 }}>
-                  Năm 2020:
-                </span>{" "}
-                Biscons chuyển sang không gian làm việc mới với hơn 50 nhân sự
-                cùng quan điểm xây dựng một doanh nghiệp hàng đầu về lĩnh vực
-                thiết kế và thi công Kiến trúc-Nội thất.
+                <span style={{ color: "#000", fontWeight: 700 }}>04/2017:</span>{" "}
+                Khởi nghiệp với mô hình văn phòng thiết kế, kết hợp đào tạo phần
+                mềm kiến trúc.
               </Text>
               <Text mt={5}>
-                <span style={{ color: "#000", fontWeight: 700 }}>
-                  Năm 2021:
-                </span>{" "}
-                mở rộng chi nhánh tại Đà Nẵng, đặt dấu mốc cho việc khai thác
-                thị trường toàn quốc.
+                <span style={{ color: "#000", fontWeight: 700 }}>2018:</span>{" "}
+                Sáng lập Biscons – Thương hiệu thiết kế và thi công trọn gói
+                thuộc Công ty cổ phần thiết kế và xây dựng Biscons Việt Nam
               </Text>
               <Text mt={5}>
                 <span style={{ color: "#000", fontWeight: 700 }}>01/2022:</span>{" "}
-                Tinh Hoa Biscons ra đời. Bước đầu thành công trong việc khẳng
-                định tên tuổi với phân khúc khách hàng cao cấp.
+                Sáng lập Tinh Hoa Biscons – Thương hiệu thiết kế kiến trúc và
+                nội thất sang trọng thuộc Công ty cổ phần thiết kế và xây dựng
+                Biscons Việt Nam
+              </Text>
+            </Flex>
+            <Flex justifyContent={"center"} mt={10}>
+              <Text
+                w={"fit-content"}
+                p={"10px 20px"}
+                bgColor={"#223b5f"}
+                color={"#fff"}
+                cursor={"pointer"}
+              >
+                Bùi Trường An
               </Text>
             </Flex>
           </Flex>
-          <Flex flexDir={"column"} mt={5}>
-            <Text sx={headStyle}>Phát triển</Text>
-            <Text mt={5} ml={5}>
-              Hiện tại, Biscons đã khẳng định được sự uy tín và vị thế của mình
-              trên thị trường. Định hướng trong tương lai của chúng tôi là mở
-              rộng thêm các mảng phân phối bán lẻ nội thất, vật liệu xây dựng để
-              hoàn thiện chuỗi cung ứng khép kín.
-            </Text>
-            <Image
-              mt={5}
-              w={"100%"}
-              h={"100%"}
-              objectFit={"contain"}
-              src={bs7.src}
-              alt="gift"
-            />
-            <Image
-              mt={5}
-              w={"100%"}
-              h={"100%"}
-              objectFit={"contain"}
-              src={bs8.src}
-              alt="gift"
-            />
-            <Image
-              mt={5}
-              w={"100%"}
-              h={"100%"}
-              objectFit={"contain"}
-              src={bs9.src}
-              alt="gift"
-            />
-            <Image
-              mt={5}
-              w={"100%"}
-              h={"100%"}
-              objectFit={"contain"}
-              src={NDC.src}
-              alt="gift"
-            />
-            <Image
-              mt={5}
-              w={"100%"}
-              h={"100%"}
-              objectFit={"contain"}
-              src={biscons_team.src}
-              alt="gift"
-            />
-            <Text mt={5} ml={5}>
-              Bằng quy trình nghiên cứu và tìm hiểu sâu tâm lý khách hàng cũng
-              như đặc thù và văn hóa doanh nghiệp, chúng tôi luôn đồng hành để
-              gia tăng tính kết nối và sự hài lòng với mỗi khách hàng và doanh
-              nghiệp, bên cạnh đó chúng tôi vẫn không quên chuyên nghiệp hóa
-              hình ảnh của mình trong mắt khách hàng và đối tác.
-            </Text>
-          </Flex>
         </Flex>
       </Flex>
-    </Flex>
 
-    <Flex p={"20px 80px"} flexDir={"column"} justifyContent={"center"} alignItems={"center"}>
-        <Text fontSize={"36pt"} color={"#000"} fontWeight={700} textTransform={"uppercase"}>meet our team</Text>
-        <Flex>
-          <FaCaretDown fontSize={"123px"} color={"#223b5f"} />
-        </Flex>
+      <Flex justifyContent={"center"} mt={10}>
+        <Box
+          maxW={["380px", "100%", "800px", "1250px"]}
+          pos={"relative"}
+          className="introduce-slider"
+        >
+          <Slider
+            {...settings}
+            nextArrow={
+              <Image
+                zIndex={2}
+                boxSize={"50px"}
+                transform={"rotate(90deg)"}
+                pos={"absolute"}
+                top={"570px"}
+                left={"65px"}
+                src={btn_up.src}
+                alt="gift"
+              />
+            }
+            prevArrow={
+              <Image
+                zIndex={2}
+                boxSize={"50px"}
+                transform={"rotate(-90deg)"}
+                pos={"absolute"}
+                top={"570px"}
+                left={"10px"}
+                src={btn_up.src}
+                alt="gift"
+              />
+            }
+          >
+            {slideDummy.map((item, i) => (
+              <Flex key={i} flexDir={"column"} p={"0 10px"}>
+                <Image
+                  src={item.img}
+                  w={"100%"}
+                  maxH={"439px"}
+                  objectFit={"cover"}
+                  alt={item.name}
+                />
+                <Flex
+                  h={"143px"}
+                  bg={"#fff"}
+                  flexDir={"column"}
+                  p={"20px 0"}
+                  alignItems={"center"}
+                >
+                  <Text
+                    color={"#6D7882"}
+                    textTransform={"uppercase"}
+                    fontWeight={300}
+                    fontSize={"14px"}
+                  >
+                    {item.pos !== null ? item.pos : ""}
+                  </Text>
+                  <Text color={"#0d0925"} fontWeight={700} fontSize={"20px"}>
+                    {item.name}
+                  </Text>
+                  <Text
+                    color={"#6D7882"}
+                    textTransform={"uppercase"}
+                    fontSize={"15px"}
+                  >
+                    {item.profession}
+                  </Text>
+                  <Text
+                    color={"#3b3f42"}
+                    fontSize={"14px"}
+                    fontWeight={700}
+                    mt={3}
+                  >
+                    {item.read_more !== null ? item.read_more : ""}
+                  </Text>
+                </Flex>
+              </Flex>
+            ))}
+          </Slider>
+        </Box>
+      </Flex>
     </Flex>
   </Flex>
 );
@@ -541,27 +450,15 @@ const textStyle = {
   lineHeight: "1.25em",
   color: "#000",
 };
-const headStyle = {
-  fontSize: "36px",
-  fontWeight: 600,
-  color: "#000",
-  // textTransform:"uppercase"
+
+const titleStyle = {
+  fontSize: "14pt",
+  fontWeight: 700,
+  color: "#0f1e5d",
+  textTransform: "uppercase",
 };
 
-const dataDummy = [
-  {
-    title: "Tâm",
-    des: "Sự tử tế. Biscons đối thoại với khách hàng, với đối tác, với nội bộ bằng sự tử tế. Chúng tôi tin rằng không chỉ kinh doanh mà bất kì sự phát triển nào có liên quan đến con người đều cần sự Tử Tế. Đó cũng chính là giá trị cốt lõi và bền vững nhất của Biscons trong lộ trình phát triển dài hạn và gắn bó vĩnh viễn.",
-  },
-  {
-    title: "Chung",
-    des: "Hướng đến cộng đồng. Chúng tôi đại diện cho thế hệ kiến trúc sư- doanh nhân mới hướng đến lợi ích chung của xã hội, xây dựng và kiến thiết nước nhà bằng đam mê, hoài bão, tri thức và sự tử tế.",
-  },
-  {
-    title: "Nhân",
-    des: "Lấy con người làm tâm phát triển. Chúng tôi luôn đánh giá cao giá trị của mỗi cá thể, khích lệ phát triển nội lực tiềm ẩn trong mỗi con người. Từ tư tưởng cốt lõi đó, mỗi cá nhân phát triển tâm-trí-lực toàn diện và cùng nhau làm nên một tập thể đoàn kết của những con người nội lực mạnh mẽ.",
-  },
-];
+
 const serviceDummy = [
   {
     img: "./images/design-teamf1.png",
@@ -577,5 +474,56 @@ const serviceDummy = [
     img: "./images/workersf1.png",
     title: "THI CÔNG XÂY DỰNG",
     des: "Cung cấp giải pháp mang đến sự tối ưu về thời gian thi công và vật liệu xây dựng. Chất lượng hoàn thiện chỉn chu, thi công đúng theo thiết kế.",
+  },
+];
+const slideDummy = [
+  {
+    img: "./images/canphuong.jpg",
+    pos: "manager",
+    name: "Vũ Văn Phương",
+    profession: "Kiến trúc sư concept",
+    read_more: "Read More",
+  },
+  {
+    img: "./images/caoquy.jpg",
+    pos: null,
+    name: "Cao Quý",
+    profession: "Kiến trúc sư concept",
+    read_more: "Read More",
+  },
+  {
+    img: "./images/thuynguyen.jpg",
+    pos: null,
+    name: "Thùy Nguyễn",
+    profession: "Kiến trúc sư concept",
+    read_more: "Read More",
+  },
+  {
+    img: "./images/minhtoan.jpg",
+    pos: null,
+    name: "Minh Toàn",
+    profession: "Kiến trúc sư cảnh quan",
+    read_more: "Read More",
+  },
+  {
+    img: "./images/quannguyen.jpg",
+    pos: "manager",
+    name: "Quân Nguyễn",
+    profession: "Chủ trì kiến trúc",
+    read_more: null,
+  },
+  {
+    img: "./images/oanhnguyen.jpg",
+    pos: "manager",
+    name: "Oanh Nguyễn",
+    profession: "Chủ trì kiến trúc",
+    read_more: "Read More",
+  },
+  {
+    img: "./images/quocluan.jpg",
+    pos: "manager",
+    name: "Trần Quốc Luân",
+    profession: "Trưởng Phòng Thi Công",
+    read_more: "Read More",
   },
 ];

@@ -1,7 +1,7 @@
 "use client";
 
 import { productListDummy } from "@/components/home/ProductPreview";
-import Header1 from "@/components/project/Header1";
+import Header1 from "@/constants/Header1";
 import CategoryItem from "@/constants/CategoryItem";
 import ProjectItem from "@/constants/ProjectItem";
 import Pagination from "@/constants/pagination/Pagination";

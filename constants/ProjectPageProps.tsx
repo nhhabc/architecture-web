@@ -1,5 +1,5 @@
 import { productListDummy } from '@/components/home/ProductPreview'
-import Header1 from '@/components/project/Header1'
+import Header1 from '@/constants/Header1'
 import { Box, Center, Grid } from '@chakra-ui/react'
 import React from 'react'
 import ProjectItem from './ProjectItem'

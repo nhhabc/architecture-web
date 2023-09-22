@@ -77,10 +77,6 @@ const NavItem = ({data}: NavProps) => {
 
   useOutsideHover(navItemRef , disableDropdown)
 
-  console.log(navItemsDummy);
-  
-
-
   return (
     <Flex color={"rgba(255,255,255,1)"} px={"10px"} py={"5px"} fontSize={"14px"} fontWeight={600} textTransform={'uppercase'} pos={'relative'} ref={navItemRef}>
       <Text transition={".4s"} _hover={{transform: "scale(1.2)"}} cursor={data?.src ? 'pointer' : undefined}
@@ -130,9 +126,9 @@ const navItemsDummy = [
     {value: 'CAFE - SPA - Nhà hàng - Khách sạn', src:"/construction-project/cafe-spa-restaurant-hotel"},
   ]},
   {value: "Dịch vụ", dropdown: [
-    {value: 'Dịch vụ thiết kế', src:"/"},
-    {value: 'Dịch vụ thi công', src:"/"},
-    {value: 'Tư vấn giám sát', src:"/"},
+    {value: 'Dịch vụ thiết kế', src:"/service/design"},
+    {value: 'Dịch vụ thi công', src:"/service/construction"},
+    {value: 'Tư vấn giám sát', src:"/service/supervision"},
   ]},
   {value: "Tin tức", src: "/", dropdown: [
     {value: 'Thông tin chung', src:"/"},

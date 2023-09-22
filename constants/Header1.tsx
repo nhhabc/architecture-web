@@ -3,7 +3,7 @@ import React from 'react'
 
 type HeaderProps = {
   bgImg: string,
-  title: string
+  title?: string
 }
 
 const Header1 = (props: HeaderProps) => {

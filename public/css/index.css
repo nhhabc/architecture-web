@@ -1,10 +1,26 @@
-.timeline__line::after{
-    content: " ";
-    height: 10px;
-    width: 100%;
-    background-color: #000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 0.3s ease;
+.timeline__line::after {
+  content: " ";
+  height: 10px;
+  width: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.biscons_ani {
+  animation-duration: 2s;
+  animation-name: fadeInDown;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }

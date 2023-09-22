@@ -3,7 +3,6 @@ import React from "react";
 import bg_header from "../../public/images/category3.jpg";
 import group from "../../public/images/Group-14812.png";
 import NDC from "../../public/images/NDC8344.jpg";
-import biscons_team from "../../public/images/kien-truc-biscons.jpg";
 import Slider from "react-slick";
 import btn_up from "../../public/images/blue-button-up.svg";
 import bg1 from "../../public/images/bg1.png";
@@ -92,7 +91,7 @@ const IntroducePage = () => (
         top={0}
         left={0}
       ></Box>
-      <Flex flexDir={"column"} w={["100%", "100%", "100%", "55%"]}>
+      <Flex flexDir={"column"} w={["100%", "100%", "100%", "55%"]} mt={10}>
         <Text
           textTransform={"uppercase"}
           fontSize={"40px"}
@@ -134,7 +133,6 @@ const IntroducePage = () => (
         ]}
         gap={8}
         alignItems={"center"}
-        mb={"100px"}
       >
         <Flex flexDir={"column"} justifyContent={"center"}>
           <Flex flexDir={"column"} maxW={"700px"} mb={20}>
@@ -180,28 +178,8 @@ const IntroducePage = () => (
           <Image src={NDC.src} alt={"gift"} />
         </Flex>
       </Grid>
-      <Grid
-        templateColumns={[
-          "repeat(1, 1fr)",
-          "repeat(1, 1fr)",
-          "repeat(1, 1fr)",
-          "repeat(2, 1fr)",
-        ]}
-        gap={8}
-      >
-        <Flex>
-          <Image
-            src={biscons_team.src}
-            w={["100%", "100%", "100%", "870px"]}
-            h={["100%", "100%", "590px", "590px"]}
-            objectFit={"cover"}
-            alt="gift"
-          />
-        </Flex>
-        <CoreValue />
-        
-      </Grid>
     </Flex>
+    <CoreValue />
     <Flex
       bgImage={bg1.src}
       bgRepeat={"no-repeat"}
@@ -237,7 +215,7 @@ const IntroducePage = () => (
           "repeat(3, 1fr)",
         ]}
         gap={8}
-        p={["40px 10px","40px 80px","40px 80px","40px 80px"]}
+        p={["40px 10px", "40px 80px", "40px 80px", "40px 80px"]}
       >
         {serviceDummy.map((item, i) => (
           <Flex
@@ -265,7 +243,7 @@ const IntroducePage = () => (
         ))}
       </Grid>
     </Flex>
-    
+
     <HistoryBegins />
 
     <Flex
@@ -275,7 +253,7 @@ const IntroducePage = () => (
       mt={10}
     >
       <Text
-        fontSize={["26pt","36pt","36pt","36pt"]}
+        fontSize={["26pt", "36pt", "36pt", "36pt"]}
         color={"#000"}
         fontWeight={700}
         textTransform={"uppercase"}
@@ -291,18 +269,18 @@ const IntroducePage = () => (
           borderRadius={"15px"}
           boxShadow={"0 0 10px 0 rgba(0,0,0,.5);"}
           p={"10px"}
-          flexDir={["column","column","row","row"]}
+          flexDir={["column", "column", "row", "row"]}
         >
-          <Flex w={["100%","45%","45%","45%"]}>
+          <Flex w={["100%", "45%", "45%", "45%"]}>
             <Image
-              w={["100%","595px","595px","595px"]}
-              h={["100%","794px","794px","794px"]}
+              w={["100%", "595px", "595px", "595px"]}
+              h={["100%", "794px", "794px", "794px"]}
               objectFit={"cover"}
               src={bs10.src}
               alt="gift"
             />
           </Flex>
-          <Flex flexDir={"column"} w={["100%","55%","55%","55%"]} p={"40px"}>
+          <Flex flexDir={"column"} w={["100%", "55%", "55%", "55%"]} p={"40px"}>
             <Text sx={titleStyle}> + founder</Text>
             <Text
               color={"#000"}
@@ -457,7 +435,6 @@ const titleStyle = {
   color: "#0f1e5d",
   textTransform: "uppercase",
 };
-
 
 const serviceDummy = [
   {

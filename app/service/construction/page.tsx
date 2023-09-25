@@ -12,7 +12,7 @@ const Construction = () => {
         title='QUY TRÌNH THI CÔNG'/>
       <Box h={"30px"}/>
       <HeadTitle title='QUY TRÌNH THỰC HIỆN'/>
-      <Flex sx={layout}>
+      <Flex className={"layout"}>
         <UnorderedList>
           <ListItem mb={"20px"}>
             <Text><strong>Bước 1:  Tiếp nhận dữ liệu đầu vào.</strong> bao gồm: Bản vẽ thiết kế, nhu cầu đầu tư, khảo sát hiện trạng dự án. Các thông tin hiện trạng có thể ảnh hưởng đến đơn giá thi công:</Text>
@@ -49,7 +49,7 @@ const Construction = () => {
         </UnorderedList>
       </Flex>
       <HeadTitle title='KHỐI LƯỢNG CÔNG VIỆC'/>
-      <Flex sx={layout}>
+      <Flex className={"layout"}>
         <Accordion allowToggle={true} border={"2px solid #2B395D"} bgColor={"white"}>
           {workingList.map((item, i) => (
             <AccordionItem key={i}>
@@ -81,7 +81,7 @@ const Construction = () => {
         </Accordion>
       </Flex>
       <HeadTitle title='THẾ MẠNH CỦA BISCONS'/>
-      <Flex sx={layout}>
+      <Flex className={"layout"}>
         <UnorderedList fontSize={15} mb={"20px"}>
           <ListItem><strong>Hoàn thiện thực tế luôn bám sát 3D trên 95%, </strong>Với chúng tôi, việc tuân thủ thiết kế, và hiện thực hóa bản vẽ ra công trường một cách chính xác luôn là yêu cầu được đặt lên hàng đầu. Bởi luôn coi mỗi bản thiết kế, mỗi công trình là một đứa con tinh thần của toàn bộ đội ngũ Biscons, chúng tôi hiểu và để tâm đến từng chi tiết nhỏ ở trong bản vẽ, hiểu ý đồ thiết kế của từng ngóc ngách ở trong ngôi nhà. Đó cũng là lý do vì sao chúng tôi rất ít khi nhận thi công các dự án không phải do mình thiết kế, và cũng không lấy làm yên tâm khi các dự án “con ruột” của mình được giao cho 1 bên khác thi công
           </ListItem>
@@ -91,7 +91,7 @@ const Construction = () => {
         <Image alt={"service"} p={"10px"} w={"50%"} src='https://kientrucbiscons.vn/wp-content/uploads/2022/09/nha-pho-hien-dai-hp-1-1.jpg'/>
         <Image alt={"service"} p={"10px"} w={"50%"} src='https://kientrucbiscons.vn/wp-content/uploads/2022/09/Untitled-2-1.jpg'/>
       </Flex>
-      <Flex sx={layout}>
+      <Flex className={"layout"}>
         <Text fontStyle={"italic"} textAlign={'center'} mb={"40px"}>Gần như không có sự khác biệt giữa thực tế và 3D</Text>
         <UnorderedList>
           <ListItem fontWeight={'bold'} fontSize={15}>Quy trình thi công chuyên nghiệp, hướng đến trải nghiệm khách hàng</ListItem>
@@ -130,7 +130,7 @@ const Construction = () => {
         <Image p={"10px"} alt='service' w={"50%"} src='https://kientrucbiscons.vn/wp-content/uploads/2022/11/z3842616906342_62fa525ba63d768733c8fbb1bb4f00c5-767x1024.jpg'/>
       </Flex>
       <Text fontStyle={"italic"} textAlign={'center'} my={"12px"} fontSize={15}>Lắp đặt hộp kiểm tra điện trở trước khi đấu nối hệ thống chống sét</Text>
-      <Flex sx={layout} fontSize={15}>
+      <Flex className={"layout"} fontSize={15}>
         <UnorderedList mb={"30px"}>
           <ListItem fontWeight={'bold'}>Chế độ bảo hành bảo trì vượt trội</ListItem>
         </UnorderedList>

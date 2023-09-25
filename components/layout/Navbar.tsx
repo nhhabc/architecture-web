@@ -138,6 +138,6 @@ const navItemsDummy = [
     {value: 'Tư vấn phong thủy', src:"/"},
     {value: 'Video', src:"/"},
   ]},
-  {value: "Tuyển dụng", src: "/"},
+  {value: "Tuyển dụng", src: "/recruitment"},
   {value: "Liên hệ", src: "/"},
 ]

@@ -24,3 +24,34 @@
     transform: none;
   }
 }
+
+.layout {
+  padding: 10px;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+}
+
+#default-table {
+  border-collapse: collapse;
+  width: 100%;
+  height: auto;
+  text-align: left;
+}
+
+#default-table td, #default-table th {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+#default-table th {
+  background-color: #223B5F;
+  font-weight: 700;
+  color: #fff;
+  font-size: 15px;
+}
+
+#default-table td {
+  font-size: 15px;
+}

@@ -12,7 +12,7 @@ const Design = () => {
         title='Quy trình thiết kế'/>
       <Box h={"30px"}/>
       <HeadTitle title='CÁC SẢN PHẨM BÀN GIAO'/>
-      <Flex sx={layout}>
+      <Flex className={"layout"}>
         <UnorderedList mb={"20px"}>
           <ListItem>BẢN HỒ SƠ THIẾT KẾ CƠ SỞ</ListItem>
           <ListItem>HỒ SƠ THIẾT KẾ KỸ THUẬT THI CÔNG XÂY DỰNG</ListItem>
@@ -41,7 +41,7 @@ const Design = () => {
         </Box>
       </Box>
       <HeadTitle title='THẾ MẠNH CỦA BISCONS'/>
-      <Flex sx={layout}>
+      <Flex className={"layout"}>
         <UnorderedList mb={"20px"} fontSize={15}>
           <ListItem><strong>Các công đoạn thiết kế của Biscons được chia nhỏ và thực hiện tỉ mỉ</strong> trong từng bước, để đảm bả một bản thiết kế có chiều sâu và có tính chính xác cao</ListItem>
           <ListItem><strong>Ngay từ bước tiếp cận dự án, và khai thác đề bài, quy trình của chúng tôi đã tạo ra sự khác biệt</strong>, phản ánh tư duy làm nghề: khâu khai thác thông tin được làm rất kỹ từ yêu cầu công năng chi tiết, nếp sống, nếp sinh hoạt của gia chủ, bối cảnh văn hoá và bối cảnh địa lý môi trường của dự án. Việc khai thác một đề bài chi tiết và có chiều sâu giúp cho thiết kế đưa ra bám sát theo câu chuyện của mỗi gia đình, mỗi bối cảnh riêng, và đảm bảo tính duy nhất – khó trùng lặp của mỗi công trình</ListItem>
@@ -67,7 +67,7 @@ const Design = () => {
           </Box>
         </Box>
       </Flex>
-      <Flex sx={layout} fontSize={15}>
+      <Flex className={"layout"} fontSize={15}>
         <UnorderedList mb={"40px"}>
           <ListItem><strong>Sự đồng bộ và check kiểm hồ sơ kỹ thuật chặt chẽ:</strong> Việc sai sót, thiếu đồng bộ trong bản vẽ kỹ thuật là một vấn đề nhức nhối trong ngành xây dựng, nội thất từ các công ty xây dựng nhà ở đến các tập đoàn xây dựng lớn. Bản thân Biscons qua nhiều năm phát triển, cũng đã chịu nhiều “trái đắng” đến từ vấn đề này, và phải trả giá bằng tiền của, thời gian trên công trường, chưa nói đến cái giá đắt nhất đó là sự uy tín của một đơn vị tư vấn thiết kế. Bởi vậy, quy trình kiểm duyệt hồ sơ của Biscons cực kỳ chặt chẽ và cẩn thận, qua 3 lớp check kiểm, đảm bảo loại trừ tối đa các sai sót dù là nhỏ nhất trong hệ thống bản vẽ kỹ thuật
           </ListItem>
@@ -78,7 +78,7 @@ const Design = () => {
         <Text fontStyle={"italic"} my={"10px"} textAlign={'center'}>Timeline triển khai một dự án của Biscons, có thể thấy quy trình check kiểm chất lượng được đan xen trong từng bước với tần suất dày đặc</Text>
       </Flex>
       <HeadTitle title='BẢNG GIÁ DỊCH VỤ THIẾT KẾ BISCONS'/>
-      <Flex sx={layout}>
+      <Flex className={"layout"}>
         <Image alt="qweqwe" src='https://kientrucbiscons.vn/wp-content/uploads/2023/02/bao-gia-2@150x-100-2048x1205.jpg' mt={"30px"}/>
       </Flex>
     </>
@@ -86,13 +86,6 @@ const Design = () => {
 }
 
 export default Design
-
-const layout = {
-  p:"10px",
-  maxW:"1250px",
-  mx:"auto",
-  flexDir:'column',
-}
 
 const sliderImg = [
   {src: "https://kientrucbiscons.vn/wp-content/uploads/2023/03/Artboard-4-1.jpg"},

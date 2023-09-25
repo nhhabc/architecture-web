@@ -1,0 +1,124 @@
+#button-contact-vr {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+}
+
+#gom-all-in-one #zalo-vr {
+  transition: 1s all;
+  -moz-transition: 1s all;
+  -webkit-transition: 1s all;
+}
+
+#button-contact-vr .button-contact {
+  position: relative;
+  margin-top: -5px;
+}
+
+#button-contact-vr .button-contact .phone-vr {
+  position: relative;
+  visibility: visible;
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  z-index: 11;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+
+#zalo-vr .phone-vr-circle-fill {
+  box-shadow: 0 0 0 0 #fff;
+  background-color: #223b5f;
+}
+
+.phone-vr-circle-fill {
+  width: 55px;
+  height: 55px;
+  top: 13px;
+  left: 18px;
+  position: absolute;
+  box-shadow: 0 0 0 0 #fff;
+  background-color: #223b5f;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  /* -webkit-animation: phone-vr-circle-fill 2.3s infinite ease-in-out;
+  animation: phone-vr-circle-fill 2.3s infinite ease-in-out; */
+  transition: all 0.5s;
+  transform-origin: 50% 50%;
+  animation: zoom 1.3s infinite;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 15px transparent;
+  }
+
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+#zalo-vr .phone-vr-img-circle {
+  background-color: #223b5f;
+}
+.phone-vr-img-circle {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  top: 25px;
+  left: 25px;
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  animation: phone-vr-circle-fill 1s infinite ease-in-out;
+}
+@keyframes phone-vr-circle-fill {
+  0% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+  10% {
+    -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  20% {
+    -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  30% {
+    -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  40% {
+    -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+}
+.img_icon img{
+  object-fit: contain;
+  width: 25px;
+  height: 30px;
+}
+
+
+/* .btn_top {
+  border: 1px solid #12379d;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #12379d;
+}
+.btn_top:hover {
+  border: 1px solid #c31d1d;
+  background-color: #c31d1d;
+  color: #fff;
+} */

@@ -139,5 +139,5 @@ const navItemsDummy = [
     {value: 'Video', src:"/"},
   ]},
   {value: "Tuyển dụng", src: "/recruitment"},
-  {value: "Liên hệ", src: "/"},
+  {value: "Liên hệ", src: "/contact"},
 ]

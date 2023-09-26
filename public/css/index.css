@@ -54,6 +54,7 @@
 
 #default-table td {
   font-size: 15px;
+}
 .animate-slow {
   animation-duration: 2s;
   animation-name: zoomIn;

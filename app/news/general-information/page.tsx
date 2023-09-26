@@ -2,7 +2,7 @@
 import HeaderIntroduce from "@/components/Introduce/HeaderIntroduce";
 import { Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import infomation_logo from "../../../public/images/infomation_logo.png";
+
 
 const GeneralInfomation = () => {
   return (

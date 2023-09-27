@@ -7,7 +7,7 @@ const ImageAnimation = () => {
   const scrollRef = useRef<any>(null)
 
   return (
-    <Flex pos={"relative"} overflowX={"clip"} >
+    <Flex pos={"relative"} overflowX={"clip"} display={['none', 'none','flex','flex']}>
       <Box w={"50%"} p={"10px"} pl={"60px"}>
         <Box pt={"140px"} pl={"30px"} ref={scrollRef}>
           <motion.div 

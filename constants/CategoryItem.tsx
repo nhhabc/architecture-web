@@ -11,7 +11,8 @@ const CategoryItem = (props: CategoryItemProps) => {
   const [isHover, setIsHover] = useState(false)
 
   return (
-    <Flex w={"33.33%"}
+    <Flex w={["100%","100%","33.33%","33.33%"]}
+      minH={"300px"}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
         bgImg={props.bgImage}
@@ -20,7 +21,7 @@ const CategoryItem = (props: CategoryItemProps) => {
         <Flex sx={cateItemHead}>
           {props.heading}
         </Flex>
-        <Box sx={cateItemText} >
+        <Box sx={cateItemText} display={['none','none','block','block']}>
           <Text>
           {props.description}
           </Text>
@@ -59,7 +60,7 @@ const cateItem = {
 const cateItemHead = {
   mb: "20px",
   color: "white",
-  fontSize: "28px",
+  fontSize: ["18px","18px","28px","28px"],
   fontWeight: 700,
   lineHeight: "1.4em",
   textTransform: "uppercase",

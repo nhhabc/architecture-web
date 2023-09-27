@@ -17,7 +17,7 @@ const baseTheme = extendTheme({
           p: "8px 25px",
           transition: "0.3s",
           w: "fit-content",
-          _hover: {color: "white", bgColor: "#374e6f"}
+          _hover: {color: "white", bgColor: "#223B5F", border: "1px solid white"}
         },
         "default": {
           fontSize: "16px",
@@ -34,6 +34,39 @@ const baseTheme = extendTheme({
             bgColor: "white",
             color: "global.primary"
           }
+        }
+      }
+    },
+    Input: {
+      variants: {
+        default: {
+          bgColor: "#FFF",
+          borderRadius: "3px",
+          color: "#000",
+          fontSize: "14px",
+          padding: "0.75em"
+        }
+      }
+    },
+    Select: {
+      variants: {
+        default: {
+          bgColor: "#FFF",
+          borderRadius: "3px",
+          color: "#000",
+          fontSize: "14px",
+          padding: "0.75em"
+        }
+      }
+    },
+    Textarea: {
+      variants: {
+        default: {
+          bgColor: "#FFF",
+          borderRadius: "3px",
+          color: "#000",
+          fontSize: "14px",
+          padding: "0.75em"
         }
       }
     }

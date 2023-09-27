@@ -12,8 +12,8 @@ const Header1 = (props: HeaderProps) => {
       bgPos={"center center"} h={"380px"}>
       <Flex py={"40px"}>
         <Center mt={"200px"} p={"10px"} w={"100%"}>
-          <Center mx={"27%"} bgColor={"#223B5FD4"} w={"100%"} textAlign={'center'}>
-            <Text color={"white"} fontSize={'55px'} fontWeight={600} textTransform={'uppercase'} lineHeight={"80px"}>
+          <Center mx={["10px","10px","27%","27%"]} bgColor={"#223B5FD4"} w={"100%"} textAlign={'center'}>
+            <Text color={"white"} fontSize={['25px','25px','30px','55px']} fontWeight={600} textTransform={'uppercase'} lineHeight={"80px"}>
               {props.title}
             </Text>
           </Center>

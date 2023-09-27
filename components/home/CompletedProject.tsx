@@ -14,17 +14,17 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
 const CompletedProject = () => {
   return (
     <Box bgColor={"global.primary"} bgPos={"top center"} bgRepeat={"no-repeat"} bgImage={"https://kientrucbiscons.vn/wp-content/uploads/2022/02/Mask-Group-7-e1645985659983.png"}
-      pb={"80px"}>
+      pb={["40px","40px","80px","80px"]}>
       <Center pt={'60px'} pb={"20px"}>
-        <Text color={"white"} fontSize={40} fontWeight={700} textTransform={'uppercase'}>Dự án đã bàn giao</Text>
+        <Text color={"white"} fontSize={[28,28,40,40]} fontWeight={700} textTransform={'uppercase'}>Dự án đã bàn giao</Text>
       </Center>
       <Box mb={"20px"}>
         <Slider infinite={true} slidesToShow={1} centerMode={true} arrows={true}
-          prevArrow={<ChevronLeftIcon sx={sliderIco} left={"200px"} />}
-          nextArrow={<ChevronRightIcon sx={sliderIco} right={"200px"}/>}>
+          prevArrow={<ChevronLeftIcon sx={sliderIco} left={["0","0","0","200px"]} />}
+          nextArrow={<ChevronRightIcon sx={sliderIco} right={["0","0","0","200px"]}/>}>
           {projectDummy.map((project, i) => (
             <Box key={i} padding={"15px"} outline={"none"} pos={"relative"}>
-              <Image alt={project.name} src={project.img} minH={"75vh"}  w={"100%"} h={"300px"} objectFit={"cover"} objectPosition={"center"} borderRadius={"8px"}
+              <Image alt={project.name} src={project.img} minH={["300px","300px","75vh","75vh"]}  w={"100%"} h={"300px"} objectFit={"cover"} objectPosition={"center"} borderRadius={"8px"}
                 cursor={'pointer'}/>
               <Flex pos={"absolute"} bottom={0} left={0} p={"40px"} flexDir={"column"} color={'white'}>
                 <Text mb={"5px"} fontSize={"24px"} fontFamily={fontBankGothic.style.fontFamily} lineHeight={"1.3em"} textTransform={'uppercase'}

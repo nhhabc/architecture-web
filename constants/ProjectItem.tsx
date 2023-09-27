@@ -14,7 +14,7 @@ const ProjectItem = (props: ProjectPropsType) => {
         <Flex m={"12.5px"} borderRadius={"6px"} pos={'relative'} minH={"300px"} cursor={'pointer'}>
           <Image alt={props.name} src={props.img} borderRadius={"6px"}/>
           <Flex pos={"absolute"} bottom={0} left={0} p={"20px"} color={"white"} zIndex={1} flexDir={'column'}>
-            <Text mb={"5px"} fontSize={"24px"} fontWeight={500} fontFamily={fontBankGothic.style.fontFamily}>{props.name}</Text>
+            <Text mb={"5px"} fontSize={["20px","20px","24px","24px"]} fontWeight={500} fontFamily={fontBankGothic.style.fontFamily}>{props.name}</Text>
             <Flex fontSize={"13px"} fontWeight={400} textTransform={'uppercase'} gap={2} flexWrap={"wrap"} justifyContent={'flex-start'}>
               <Text>{props.type}</Text>
               <span>|</span>

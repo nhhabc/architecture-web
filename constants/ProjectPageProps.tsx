@@ -19,9 +19,9 @@ const ProjectPageProps = (props: ProjectPagePropsType) => {
   return (
     <>
       <Header1 bgImg={props.headerImg} title={props.title}/>
-      <Box pt={"80px"} px={"80px"} pb={"40px"} >
+      <Box pt={["20px","20px","80px","80px"]} px={["10px","10px","80px","80px"]} pb={"40px"} >
         <Grid alignContent={'flex-start'} 
-          templateColumns='repeat(3, 1fr)' mb={"20px"}>
+          templateColumns={['repeat(1, 1fr)','repeat(1, 1fr)','repeat(2, 1fr)','repeat(3, 1fr)']} mb={"20px"}>
           {props?.project && props.project.map((product, i) => (
             <ProjectItem key={i} img={product.img}
             location={product.location}

@@ -8,36 +8,38 @@ import { clientAction } from '@/redux/client-slice'
 import Slider from 'react-slick'
 import Link from 'next/link'
 import { AddIcon } from '@chakra-ui/icons'
+import { useBreakpoint } from '@/hook/useBreakpoint'
 
 const NewsSection = () => {
   const {currentNewsType} = useSelector((state: RootState) => state.client)
   const dispatch = useDispatch()
+  const isBreakpoint = useBreakpoint(900)
 
   const newsList = useMemo(() => {
     return newsDummy.filter((news) => news.type === currentNewsType)
   }, [currentNewsType])
 
   return (
-    <Box p={"80px"}>
-      <Box mb={"20px"} color={"#2F2B2B"} fontSize={"40px"} fontWeight={700} textTransform={'uppercase'}>
+    <Box p={["20px","20px","80px","80px"]}>
+      <Box mb={"20px"} color={"#2F2B2B"} fontSize={["28px","28px","40px","40px"]} fontWeight={700} textTransform={'uppercase'} textAlign={'center'}>
         <h2>Tin tức</h2>
       </Box>
       <Flex justifyContent={'flex-end'}>
-        <Flex gap={"40px"}>
+        <Flex gap={["10px","10px","40px","40px"]} flexWrap={"wrap"}>
           {newsType.map((type, i) => (
             <Box key={i} fontSize={"18px"} fontWeight={currentNewsType === type.type ? 700 : 600} textTransform={'uppercase'} bgColor={'white'} p={"8px 15px"}
               cursor={'pointer'} color={"#223B5F"} pos={'relative'}
               onClick={() => dispatch(clientAction.setCurrentNewType(type.type))}>
-              {currentNewsType === type.type && <Image src={logo.src} alt='logo' pos={'absolute'} boxSize={"40px"} top={0} left={"-30px"}/>}
+              {currentNewsType === type.type && <Image src={logo.src} alt='logo' pos={'absolute'} boxSize={"40px"} top={0} left={"-30px"} display={["none","none","block","block"]}/>}
               {type.name}
             </Box>
           ))}
         </Flex>
       </Flex>
       <Box p={"10px"} className='news-slider'>
-        <Slider infinite={true} slidesToShow={3} swipeToSlide={true} arrows={false} dots={true}>
+        <Slider infinite={true} slidesToShow={isBreakpoint ? 1 : 3} swipeToSlide={true} arrows={false} dots={true}>
           {newsList.map((news, i) => (
-            <Box key={i} padding={"20px"}>
+            <Box key={i} py={"20px"} px={["0px","0px","20px","20px"]}>
             <Box boxShadow={"0 0 10px 0 rgba(0,0,0,.1)"} borderRadius={"15px"}>
               <Box cursor={'pointer'}>
                 <Image alt={news.title} src={news.img} borderRadius={"15px 15px 0 0"}/>

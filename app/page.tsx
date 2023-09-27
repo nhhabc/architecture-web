@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <BannerSlider/>
-      <Box h={"70px"}/>
+      <Box h={"70px"} display={["none","none","block","block"]}/>
       <CompanyPreview/>
       <ImageAnimation/>
       <MainCategory/>

@@ -1,6 +1,6 @@
 "use client";
 import Header1 from '@/constants/Header1';
-import { Box, Center, Flex, Grid, Image, Text } from '@chakra-ui/react';
+import { Box, Center, Grid, Image, Text } from '@chakra-ui/react';
 import recruitImg1 from "../../public/images/recruit1.jpg";
 import recruitImg2 from "../../public/images/recruit2.jpg";
 import recruitImg3 from "../../public/images/recruit3.jpg";
@@ -10,7 +10,6 @@ import recruitImg6 from "../../public/images/recruit6.jpg";
 import recruitImg7 from "../../public/images/recruit7.jpg";
 import React from 'react'
 import logo from "../../public/mini-logo.svg"
-import Link from 'next/link';
 import NewsItem from '@/constants/NewsItem';
 
 const Recruitment = () => {
@@ -19,13 +18,13 @@ const Recruitment = () => {
       <Header1 bgImg='https://kientrucbiscons.vn/wp-content/uploads/2022/02/pc-1-min-20211103082154-e1645985934118.jpg'
         title='TUYỂN DỤNG'/>
       <Center pt={"40px"} flexDir={'column'}>
-        <Center gap={3}>
+        <Center gap={3} flexDir={["column","column","row","row"]}>
           <Image alt='mini-logo' src={logo.src} boxSize={"30px"}/>
           <Text fontSize={"24px"} fontWeight={800} color={'black'}>TUYỂN DỤNG</Text>
         </Center>
-        <Box borderTop={"6px solid #223B5F"} w={"200px"} my={"15px"} mt={"20px"}/>
+        <Box borderTop={"6px solid #223B5F"} w={"180px"} my={"15px"} mt={"20px"}/>
       </Center>
-      <Grid px={"80px"} py={"40px"} columnGap={"25px"} rowGap={"30px"} templateColumns='repeat(3, 1fr)'>
+      <Grid px={["20px","20px","20px","80px"]} py={["20px","20px","20px","40px"]} columnGap={"25px"} rowGap={"30px"} templateColumns={['repeat(1, 1fr)','repeat(1, 1fr)','repeat(2, 1fr)','repeat(3, 1fr)']}>
         {recruitmentList.map((recruitment,i) => (
           <NewsItem key={i} date={recruitment.date} 
             desc={recruitment.desc}

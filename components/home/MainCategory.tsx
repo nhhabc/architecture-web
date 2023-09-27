@@ -15,12 +15,12 @@ const MainCategory = () => {
       bgRepeat={"no-repeat"}
       bgSize={"cover"}
       padding={"60px 10px"}>
-      <Center color={"white"} fontSize={"40px"} fontWeight={700}>
+      <Center color={"white"} fontSize={"24px"} fontWeight={700} textAlign={'center'}>
         <h2>HẠNG MỤC THIẾT KẾ TRỌNG ĐIỂM</h2>
       </Center>
     </Box>
 
-    <Flex minH={"85vh"}>
+    <Flex minH={"85vh"} flexDir={["column","column","row","row"]}>
       {cateDummy.map((item, i) => (
         <CategoryItem key={i} bgImage={item.bgImg} description={item.description} heading={item.heading}/>
       ))}

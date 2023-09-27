@@ -74,7 +74,7 @@ const Videos = () => {
           </Flex>
           <Flex w={["100%","100%","70%","70%"]} ml={[0,0,3,3]}>
             <AspectRatio w={["100%","100%","100%","100%"]} h={["200px","200px","350px","450px"]} ratio={1}>
-              <iframe title={title} src={isLink} allowFullScreen />
+              <iframe title={title} src={isLink} allowFullScreen/>
             </AspectRatio>
           </Flex>
         </Flex>

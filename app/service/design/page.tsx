@@ -53,12 +53,12 @@ const Design = () => {
           <ListItem><strong>Khâu tương tác và trình bày ý tưởng với chủ đầu tư được diễn ra trực quan, dễ hiểu</strong>. Thường qua các cuộc họp online hoặc họp trực tiếp tại văn phòng Biscons, chúng tôi sẽ show các bản thiết kế từ trong ra ngoài công trình trên màn hình máy tính, chủ đầu tư có thể dễ dàng hình dung từng ngóc ngách của dự án. Khách hàng cũng có thể xem file thiết kế 3D của dự án, xoay, zoom và xem dữ liệu kích thước trên điện thoại thông qua công nghệ A360</ListItem>
         </UnorderedList>
       </Flex>
-      <Flex maxW={"1250px"} mx={"auto"} p={"10px"} flexDir={"row"}>
-        <Box w={"50%"} p={"10px"}>
+      <Flex maxW={"1250px"} mx={"auto"} p={"10px"} flexDir={["column","column","row","row"]}>
+        <Box w={["100%","100%","50%","50%"]} p={"10px"}>
           <Image alt='asd' src='https://kientrucbiscons.vn/wp-content/uploads/2022/09/275863018_1194147758004226_3871421806848809308_n.jpeg'/>
         </Box>
-        <Box w={"50%"} p={"10px"} fontSize={15}>
-          <Box mt={"110px"}>
+        <Box w={["100%","100%","50%","50%"]} p={"10px"} fontSize={15}>
+          <Box mt={["20px","20px","110px","110px"]}>
             <UnorderedList mb={"20px"}>
               <ListItem><strong>Ý tưởng thiết kế cần được qua sự phản biện và phê duyệt nghiêm ngặt</strong> từ phía hội đồng thiết kế. Quá trình lên concept cho dự án, các kiến trúc sư thực hiện ngoài việc bảo vệ ý tưởng trước chủ trì dự án, thì cần trình bày trước hội đồng thiết kế, gồm các chủ trì khác cùng trưởng phòng thiết kế, để chọn ra phương án tốt nhất, và đảm bảo được các tính toán đưa ra là tối ưu nhất, trước khi trình bày phương án thiết kế với chủ đầu tư.
               </ListItem>

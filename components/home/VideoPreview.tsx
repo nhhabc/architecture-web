@@ -5,14 +5,14 @@ import React from 'react'
 const VideoPreview = () => {
   return (
     <Box bgImage={"https://kientrucbiscons.vn/wp-content/uploads/2022/03/2b47b811f12a3e74673b.jpg"}
-      bgPos={"center"} bgRepeat={"no-repeat"} bgSize={"cover"} pt={"140px"} px={"80px"} pb={"60px"}
+      bgPos={"center"} bgRepeat={"no-repeat"} bgSize={"cover"} pt={["110px","110px","140px","140px"]} px={["10px","10px","80px","80px"]} pb={["20px","20px","60px","60px"]}
       pos={"relative"} overflowX={'hidden'}>
-      <Box fontSize={"40px"} fontWeight={700} textTransform={'uppercase'} textAlign={'center'} pos={"absolute"}
+      <Box fontSize={"28px"} fontWeight={700} textTransform={'uppercase'} textAlign={'center'} pos={"absolute"}
         top={"40px"} w={"92%"} color={"#2B2727"}>
         Thư viện video
       </Box>
-      <Flex>
-        <Flex w={"50%"} p={"10px"} flexDir={'column'}>
+      <Flex flexDir={['column','column','column','row']}>
+        <Flex w={["100%","100%","100%","50%"]} p={"10px"} flexDir={'column'}>
           <Flex bgImg={"https://kientrucbiscons.vn/wp-content/uploads/2022/03/Untitled-2-1-min.jpg"} p={"20px"} sx={videoItem}
             minH={"470px"}>
             <Box sx={layout}/>
@@ -32,7 +32,7 @@ const VideoPreview = () => {
           </Center>
         </Flex>
 
-        <Flex w={"25%"} p={"10px"} flexDir={'column'} gap={"20px"}>
+        <Flex w={["100%","100%","100%","25%"]} p={"10px"} flexDir={['row','row','row','column']} gap={"20px"}>
           <Flex bgImage={"https://kientrucbiscons.vn/wp-content/uploads/2022/03/Untitled-3-1-min.jpg"} p={"10px"} h={"225px"} sx={videoItem}>
             <Box sx={layout}/>
             <Flex pos={'absolute'} w={"90%"} color={'white'} flexDir={'column'}>
@@ -53,7 +53,7 @@ const VideoPreview = () => {
           </Flex>
         </Flex>
 
-        <Flex w={"25%"} p={"10px"} flexDir={'column'} gap={"20px"}>
+        <Flex w={["100%","100%","100%","25%"]} p={"10px"} flexDir={['row','row','row','column']} gap={"20px"}>
           <Flex bgImage={"https://kientrucbiscons.vn/wp-content/uploads/2022/03/Untitled-4-min.png"} p={"10px"} h={"225px"} sx={videoItem}>
             <Box sx={layout}/>
             <Flex pos={'absolute'} w={"90%"} color={'white'} flexDir={'column'}>

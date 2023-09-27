@@ -10,14 +10,14 @@ import { Box, Center, Flex, Grid } from "@chakra-ui/react";
 export default function Architecture () {
   return <>
     <Header1 bgImg="https://kientrucbiscons.vn/wp-content/uploads/2022/03/pc-1-min-20211103082154-min.jpg" title="Dự án kiến trúc"/>
-    <Flex minH={"85vh"} mt={"40px"}>
+    <Flex minH={"85vh"} mt={"40px"} flexDir={["column","column","row","row"]}>
       {cateDummy.map((cate, i) => (
         <CategoryItem key={i} bgImage={cate.bgImg} description={cate.description} heading={cate.heading}/>
       ))}
     </Flex>
-    <Box pt={"80px"} px={"80px"} pb={"40px"} >
+    <Box pt={"80px"} px={["10px","10px","80px","80px"]} pb={"40px"} >
     <Grid alignContent={'flex-start'} 
-      templateColumns='repeat(3, 1fr)' mb={"20px"}>
+      templateColumns={['repeat(1, 1fr)','repeat(1, 1fr)','repeat(2, 1fr)','repeat(3, 1fr)']} mb={"20px"}>
       {productListDummy.map((product, i) => (
         <ProjectItem key={i} img={product.img}
         location={product.location}

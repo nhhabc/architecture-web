@@ -43,7 +43,8 @@ const Navbar = () => {
 
   return (
     <Flex w={"100%"} transition={"all .6s"} pos={'fixed'} bgColor={changeStyle ? "#0000004d" : "transparent"} bgGradient={"linear(to-b, #424242BA, #FFFFFF00)"}
-      px={"40px"} zIndex={1000} backdropFilter={changeStyle ? "blur(15px)" : undefined} transform={show ? "translateY(0)" : "translateY(-100%)"}>
+      px={"40px"} zIndex={1000} backdropFilter={changeStyle ? "blur(15px)" : undefined} transform={show ? "translateY(0)" : "translateY(-100%)"}
+      display={["none","none","none","flex"]}>
       <Flex minW={"70px"} alignItems={'center'} mx={'auto'} w={"100%"}>
         <Flex w={"15%"}>
           <Center p={"10px"} w={"100%"}>
@@ -106,7 +107,7 @@ type NavProps = {
   data: any
 }
 
-const navItemsDummy = [
+export const navItemsDummy = [
   {value: "Trang chủ", src: "/"},
   {value: "Giới thiệu", src: "/introduce", dropdown: [
     {value: 'Nền móng - con đường', src:"/introduce/road"},
@@ -130,7 +131,7 @@ const navItemsDummy = [
     {value: 'Dịch vụ thi công', src:"/service/construction"},
     {value: 'Tư vấn giám sát', src:"/service/supervision"},
   ]},
-  {value: "Tin tức", src: "/", dropdown: [
+  {value: "Tin tức", dropdown: [
     {value: 'Thông tin chung', src:"/news/general-information"},
     {value: 'Hoạt động nội bộ', src:"/news/internal-operations"},
     {value: 'Cẩm nang xây nhà', src:"/news/house-building"},

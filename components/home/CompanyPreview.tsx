@@ -6,11 +6,11 @@ import React from 'react'
 const CompanyPreview = () => {
   return (
     <Flex py={"60px"} zIndex={2} flexDir={"column"}>
-      <Flex pos={'relative'} w={"65%"} pl={["40px","40px","40px","80px"]} flexDir={'column'}>
+      <Flex pos={'relative'} w={["100%","100%","65%","65%"]} pl={["40px","40px","40px","80px"]} flexDir={'column'}>
         <Flex w={"100%"} flexDir={['column','column','column','row']}>
           <Flex w={"40%"} >
             <Center flexDir={['column','column','column','row']}
-              alignItems={["flex-start","flex-start","flex-start","flex-start"]}>
+              alignItems={["flex-start","flex-start","center","center"]}>
               <Box fontFamily={fontBankGothic.style.fontFamily} fontSize={"75px"} fontWeight={400} color={"global.secondary"} mr={"40px"}>
                 37
               </Box>
@@ -21,7 +21,8 @@ const CompanyPreview = () => {
             </Center>
           </Flex>
           <Flex w={"60%"}>
-            <Center flexDir={['column','column','column','row']}>
+            <Center flexDir={['column','column','column','row']}
+              alignItems={["flex-start","flex-start","center","center"]}>
               <Box fontFamily={fontBankGothic.style.fontFamily} fontSize={"75px"} fontWeight={400} color={"global.secondary"} mr={"40px"}>
                 500+
               </Box>
@@ -32,10 +33,10 @@ const CompanyPreview = () => {
             </Center>
           </Flex>
         </Flex>
-        <Box my={"60px"} fontSize={"36px"} fontWeight={300} lineHeight={"1.3em"}>
+        <Box my={"60px"} mb={["30px","30px", "60px", "60px"]} fontSize={["18px","18px","36px","36px"]} fontWeight={300} lineHeight={"1.3em"} pr={"40px"}>
           Với quan điểm của chúng tôi, Kiến trúc là bản tuyên ngôn thể hiện tính cách cũng như phong cách sống của gia chủ.
         </Box>
-        <Box mt={"60px"}>
+        <Box mt={["0px","0px","60px","60px"]}>
           <Box fontSize={"16px"} fontWeight={500} textTransform={'uppercase'} borderRadius={3} p={"8px 25px"} bgColor={"global.primary"} w={'fit-content'} color={"ast.4"}
             transition={".3s"}
             _hover={{bgColor: "ast.4", color: "global.primary"}}

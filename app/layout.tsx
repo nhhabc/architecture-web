@@ -13,6 +13,8 @@ import Footer from "@/components/layout/Footer";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store";
 import Contact from "@/components/contact-fixed/Contact";
+import ResponsiveMenu from "@/components/layout/ResponsiveMenu";
+import { ViewportProvider } from "@/hook/ViewportProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,14 +29,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <ViewportProvider>
         <Provider store={store}>
           <Contact />
           <ChakraProvider theme={baseTheme}>
             <Navbar />
+            <ResponsiveMenu/>
             {children}
             <Footer />
           </ChakraProvider>
         </Provider>
+        </ViewportProvider>
       </body>
     </html>
   );

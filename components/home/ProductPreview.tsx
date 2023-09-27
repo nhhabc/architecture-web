@@ -13,8 +13,8 @@ import ProjectItem from '@/constants/ProjectItem'
 
 const ProductPreview = () => {
   return (
-    <Grid pt={"80px"} px={"80px"} pb={"40px"} flexWrap={"wrap"} alignContent={'flex-start'} 
-      templateColumns='repeat(3, 1fr)'>
+    <Grid pt={["30px","30px","80px","80px"]} px={["10px","10px","80px","80px"]} pb={"40px"} flexWrap={"wrap"} alignContent={'flex-start'} 
+      templateColumns={['repeat(1, 1fr)','repeat(1, 1fr)','repeat(2, 1fr)','repeat(3, 1fr)']}>
       {productListDummy.map((product, i) => (
         <ProjectItem key={i} img={product.img}
           location={product.location}

@@ -40,7 +40,7 @@ const Pagination = (props: PaginationPropsType) => {
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <UnorderedList display={'flex'} listStyleType={"none"}
+    <UnorderedList display={'flex'} listStyleType={"none"} flexWrap={"wrap"} justifyContent={'center'}
       // className={classnames('pagination-container', { [className]: className })}
     >
        {/* Left navigation arrow */}

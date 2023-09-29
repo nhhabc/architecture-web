@@ -16,22 +16,25 @@ const Contact = () => {
         bgPos={"center center"} bgRepeat={"no-repeat"} bgSize={'cover'} pos={'relative'} minH={"680px"} >
         <Box bgColor={"#000"} opacity={"0.5"} pos={"absolute"} h={"100%"} w={"100%"} top={0} left={0}/>
       </Box>
-      <Box mt={"-350px"} px={"60px"}>
+      <Box mt={"-350px"} px={["10px","10px","60px","60px"]}>
         <Flex p={"10px"} alignItems={'center'} flexDir={'column'}>
-          <Box sx={text} fontSize={"40px"} fontWeight={600} zIndex={1}
-            mb={"20px"}>
+          <Box sx={text} fontSize={["26px","26px","40px","40px"]} fontWeight={600} zIndex={1}
+            mb={"20px"} textAlign={'center'}>
             <h1>Liên hệ với biscons</h1>
           </Box>
-          <Text sx={text} zIndex={1} mb={"20px"} fontSize={16} fontWeight={400}>TRẢI NGHIỆM GIẢI PHÁP SỐ 1 VIỆT NAM VỀ THIẾT KẾ VÀ XÂY DỰNG NHÀ</Text>
-          <Flex mt={"40px"} bgColor={"global.primary"} padding={"60px 80px 20px 80px"} zIndex={1} w={"100%"}>
-            <Flex w={"100%"}>
-              <Flex w={"50%"} p={"10px"} flexDir={'column'}>
-                <Text sx={text} fontSize={30} fontWeight={700} mb={"20px"}>BISCONS</Text>
-                <Text sx={text} mb={"20px"}>CÔNG TY KIẾN TRÚC VÀ NỘI THẤT HÀNG ĐẦU VIỆT NAM</Text>
-                <Flex>
+          <Text sx={text} zIndex={1} mb={"20px"} fontSize={[14,14,16,16]} fontWeight={400} textAlign={'center'}>
+            TRẢI NGHIỆM GIẢI PHÁP SỐ 1 VIỆT NAM VỀ THIẾT KẾ VÀ XÂY DỰNG NHÀ
+          </Text>
+          <Flex mt={"40px"} bgColor={"global.primary"} 
+            padding={["10px","10px","10px","60px 80px 20px 80px"]} zIndex={1} w={"100%"}>
+            <Flex w={"100%"} flexDir={["column","column","column","row"]}>
+              <Flex w={["100%","100%","100%","50%"]} p={"10px"} flexDir={'column'}>
+                <Text sx={text} fontSize={[22,22,30,30]} fontWeight={700} mb={"20px"}>BISCONS</Text>
+                <Text sx={text} mb={"20px"} fontSize={[14,14,16,16]}>CÔNG TY KIẾN TRÚC VÀ NỘI THẤT HÀNG ĐẦU VIỆT NAM</Text>
+                <Flex flexDir={["column","column","row","row"]}>
                   <Box sx={contactContainer}>
                     <Image alt='location' src={locateIco.src} w={"15%"} mb={"15px"}/>
-                    <Text sx={text} mb={"5px"} fontWeight={700} fontSize={"18px"}>ĐỊA CHỈ</Text>
+                    <Text sx={text} mb={"5px"} fontWeight={700} fontSize={["16px","16px","18px","18px"]}>ĐỊA CHỈ</Text>
                     <Text sx={contactText}>
                       <strong>Miền Bắc</strong>: Toà B1, Roman Plaza, P. Tố Hữu, Đai Mễ, Nam Từ Liêm, Hà Nội
                       <br/>
@@ -42,26 +45,26 @@ const Contact = () => {
                   </Box>
                   <Box sx={contactContainer}> 
                     <Image alt='fb' src={fbIco.src} w={"40px"} mb={"15px"}/>
-                    <Text sx={text} mb={"5px"} fontWeight={700} fontSize={"18px"}>FANPAGE</Text>
+                    <Text sx={text} mb={"5px"} fontWeight={700} fontSize={["16px","16px","18px","18px"]}>FANPAGE</Text>
                     <Text sx={contactText}>Biscons Eco - Kiến Trúc Xanh</Text>
                   </Box>
                 </Flex>
-                <Flex>
+                <Flex flexDir={["column","column","row","row"]}>
                   <Box sx={contactContainer}>
                     <Image src={mailIco.src} alt='mail-ico' w={"20%"} mb={"15px"}/>
-                    <Text sx={text} mb={"5px"} fontWeight={700} fontSize={"18px"}>EMAIL</Text>
+                    <Text sx={text} mb={"5px"} fontWeight={700} fontSize={["16px","16px","18px","18px"]}>EMAIL</Text>
                     <Text sx={contactText}>biscons.jsc@gmail.com</Text>
                   </Box>
                   <Box sx={contactContainer}>
                     <Image src={phoneIco.src} alt='mail-ico' w={"20%"} mb={"15px"}/>
-                    <Text sx={text} mb={"5px"} fontWeight={700} fontSize={"18px"}>HOTLINE</Text>
+                    <Text sx={text} mb={"5px"} fontWeight={700} fontSize={["16px","16px","18px","18px"]}>HOTLINE</Text>
                     <Text sx={contactText}>Hotline Hà Nội: 0847466868</Text>
                   </Box>
                 </Flex>
-                <Box my={"20px"} sx={text} fontSize={"30px"} fontWeight={700}>
+                <Box my={"20px"} sx={text} fontSize={["22px","22px","30px","30px"]} fontWeight={700}>
                   THEO DÕI BISCONS
                 </Box>
-                <Text color={'white'} mb={"20px"}>Cùng cập nhật những thiết kế kiến trúc mới nhất, xu hướng và phong cách sống đẳng cấp</Text>
+                <Text color={'white'} mb={"20px"} fontSize={[14,14,16,16]}>Cùng cập nhật những thiết kế kiến trúc mới nhất, xu hướng và phong cách sống đẳng cấp</Text>
                 <Flex gap={"20px"}>
                   <Image alt='fbIco' src={fbIco.src} boxSize={"30px"}/>
                   <Image alt='instaIco' src={instaIco.src} boxSize={"30px"}/>
@@ -69,9 +72,9 @@ const Contact = () => {
                   <Image alt='youtube-ico' src={uTubeIco.src} boxSize={"30px"}/>
                 </Flex>
               </Flex>
-              <Flex w={"50%"} p={"10px"} flexDir={'column'} color={'white'}>
-                <Text mb={"20px"} fontSize={"30px"} fontWeight={700}>ĐẶT LỊCH TƯ VẤN</Text>
-                <Text mb={"20px"}>ĐĂNG KÝ THÔNG TIN NGAY ĐỂ ĐƯỢC TƯ VẤN SỚM NHẤT BỞI ĐỘI NGŨ KIẾN TRÚC SƯ CỦA BISCONS</Text>
+              <Flex w={["100%","100%","100%","50%"]} p={"10px"} flexDir={'column'} color={'white'}>
+                <Text mb={"20px"} fontSize={["22px","22px","30px","30px"]} fontWeight={700}>ĐẶT LỊCH TƯ VẤN</Text>
+                <Text mb={"20px"} fontSize={[14,14,16,16]}>ĐĂNG KÝ THÔNG TIN NGAY ĐỂ ĐƯỢC TƯ VẤN SỚM NHẤT BỞI ĐỘI NGŨ KIẾN TRÚC SƯ CỦA BISCONS</Text>
                 <form>
                   <Box mb={"12px"}>
                     <Text>Họ và tên</Text>
@@ -135,7 +138,7 @@ const contactText = {
 
 const contactContainer = {
   p: "40px 60px 20px 0",
-  w: "50%",
+  w: ["100%","100%","50%","50%"],
 }
 
 const input = {

@@ -7,17 +7,17 @@ const TopProductSection = () => {
   return (
     <Box mt={"40px"} mx={["0px","0px","0px","80px"]} mb={"80px"}>
       <Box bgImg={bannerTopProduct.src} bgPos={"center"} bgRepeat={"no-repeat"} bgSize={"cover"} pos={"relative"}
-        p={"60px 40px"} h={"220px"}>
+        p={["60px 10px", "60px 10px", "60px 40px", "60px 40px"]} h={"220px"}>
       <Box sx={layout}/>
         <Flex pos={"absolute"} justifyContent={'space-between'} w={"100%"} flexDir={['column','column','row','row']}
           alignItems={'center'}>
-          <Text color={"white"} fontSize={[20,20,40,40]} fontWeight={600} textTransform={'uppercase'} lineHeight={"1.3em"} textAlign={'center'}>
+          <Text color={"white"} fontSize={[20,20,30,40]} fontWeight={600} textTransform={'uppercase'} lineHeight={"1.3em"} textAlign={'center'}>
             Tổng hợp các mẫu
             <br/>
             thiết kế biệt thự đẹp nhất
           </Text>
           <Link href={"/"}>
-            <Button variant={"default-revert"} mr={["40px","40px","80px","80px"]} mt={"40px"}>
+            <Button variant={"default-revert"} mr={["20px","20px","80px","80px"]} mt={"40px"}>
               Tìm hiểu thêm
             </Button>
           </Link>

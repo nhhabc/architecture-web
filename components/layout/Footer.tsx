@@ -13,33 +13,49 @@ const Footer = () => {
       flexDir={"column"}
       position={"relative"}
       w={"100%"}
-      mt={["300px","300px","300px","250px"]}
+      mt={["300px", "300px", "300px", "250px"]}
     >
       <Box
         position={"absolute"}
         transform={"translate(-50%, -50%)"}
-        top={["-7%","-15%","-15%","-15%"]}
+        top={["-7%", "-15%", "-15%", "-15%"]}
         left={"50%"}
         bgImage={banner_ft.src}
-        w={["95%","95%","95%","80%"]}
+        w={["95%", "95%", "95%", "80%"]}
         h={"272px"}
+        bgPos={"center"}
         bgRepeat={"no-repeat"}
         bgSize={"cover"}
       >
-
-        {/* <Box bgColor={"#000"} opacity={".7"} pos={"absolute"} top={0} left={0} w={"100%"} h={"100%"}></Box> */}
-        <Flex justifyContent={"space-around"} alignItems={"center"} height={"100%"} flexDir={["column", "column","column","row"]}>
+        <Box
+          bgColor={"global.secondary"}
+          opacity={0.7}
+          pos={"absolute"}
+          top={0}
+          left={0}
+          w={"100%"}
+          h={"100%"}
+        ></Box>
+        <Flex
+          pos={"absolute"}
+          w={"100%"}
+          justifyContent={"space-around"}
+          alignItems={"center"}
+          height={"100%"}
+          flexDir={["column", "column", "column", "row"]}
+        >
           <Text
-            color={"#fff"}
+            color={"white"}
             textTransform={"uppercase"}
-            fontSize={["30px","44px","44px","44px"]}
+            fontSize={["30px", "44px", "44px", "44px"]}
             fontWeight={700}
             lineHeight={"63px"}
-            w={["100%","100%","100%","50%"]}
-            textAlign={["center","center","center","start"]}
+            w={["100%", "100%", "100%", "50%"]}
+            textAlign={["center", "center", "center", "start"]}
           >
             Nói với chúng tôi về ngồi nhà của bạn
           </Text>
+          <Link href="tel:0357331279">
           <Flex
             bg={"#fff"}
             padding={"16px 25px 16px 25px"}
@@ -50,13 +66,14 @@ const Footer = () => {
             textTransform={"uppercase"}
             color={"#000"}
             _hover={{
-              bg:"#223b5f",
-              color:"#fff"
+              bg: "#223b5f",
+              color: "#fff",
             }}
-            cursor={"poi"}
+            cursor={"pointer"}
           >
             Liên hệ ngay
           </Flex>
+          </Link>
         </Flex>
       </Box>
       <Grid

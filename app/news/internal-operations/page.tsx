@@ -1,4 +1,4 @@
-"use-client";
+ 
 import Header1 from "@/constants/Header1";
 import { Flex, Grid, Image, Text } from "@chakra-ui/react";
 import React from "react";
@@ -18,7 +18,7 @@ const InternalOperations = () => {
         bgImg="https://kientrucbiscons.vn/wp-content/uploads/2022/02/pc-1-min-20211103082154-e1645985934118.jpg"
         title="Hoạt động nội bộ"
       />
-      <Flex padding={["40px 10px","40px 80px","40px 80px","40px 80px"]} justifyContent={"center"} flexDir={"column"}>
+      <Flex padding={["40px 10px","40px 10px","40px 10px","40px 80px"]} justifyContent={"center"} flexDir={"column"}>
         <Flex alignItems={"center"} justifyContent={"center"}>
           <Flex
             w={"32px"}
@@ -43,7 +43,7 @@ const InternalOperations = () => {
           </Text>
         </Flex>
 
-        <Grid px={["10px","10px","80px","80px"]} py={"40px"} columnGap={"25px"} rowGap={"30px"} templateColumns={['repeat(1, 1fr)','repeat(3, 1fr)','repeat(3, 1fr)','repeat(3, 1fr)']}>
+        <Grid px={["10px","10px","10px","80px"]} py={"40px"} columnGap={"25px"} rowGap={"30px"} templateColumns={['repeat(1, 1fr)','repeat(2, 1fr)','repeat(2, 1fr)','repeat(3, 1fr)']}>
         {operationsDummy.map((item,i) => (
           <NewsItem key={i} date={item.date} 
             desc={item.desc}

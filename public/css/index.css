@@ -89,3 +89,30 @@
 .news-item:hover img {
   transform: scale(1.05);
 }
+
+.news-item::before{
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 140px;
+  background-color: #fff;
+  bottom: -23px;
+  right: -74px;
+  transform: rotate(33deg) scale(1,1);
+  z-index: 10;
+  transition: 0.5s;
+  transform-origin: 0 0;
+}
+.news-item::after{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 105px;
+  background-image: url("https://kientrucbiscons.vn/wp-content/uploads/2022/03/decor.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  bottom: -15px;
+  right: 0;
+  z-index: 5;
+}

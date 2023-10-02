@@ -13,7 +13,7 @@ type NewsItemProps = {
 const NewsItem = (props: NewsItemProps) => {
   return (
     <Box boxShadow={"1px 1px 10px 1px rgb(0 0 0 / 10%)"} borderRadius={"10px"} transition={"all 0.3s"}
-      bgColor={"white"} _hover={{boxShadow: "1px 1px 10px 1px rgb(0 0 0 / 30%)"}} overflow={'hidden'} className='news-item'>
+      bgColor={"white"} _hover={{boxShadow: "1px 1px 10px 1px rgb(0 0 0 / 30%)"}} overflow={'hidden'} className='news-item' pos={"relative"}>
       <Link href={props.href}>
         <Image alt={props.header} src={props.img} borderRadius={"10px 10px 0 0"} transition={".3s"}
           transformOrigin={"center center"} objectFit={'cover'} height={"300px"} w={"100%"}/>

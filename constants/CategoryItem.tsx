@@ -17,11 +17,11 @@ const CategoryItem = (props: CategoryItemProps) => {
         onMouseLeave={() => setIsHover(false)}
         bgImg={props.bgImage}
         sx={cateItem}>
-        <Box sx={cateOverlay}/>
+        <Box sx={cateOverlay} opacity={isHover ? 0.6 : 0.3}/>
         <Flex sx={cateItemHead}>
           {props.heading}
         </Flex>
-        <Box sx={cateItemText} display={['none','none','block','block']}>
+        <Box sx={cateItemText} display={['none','none','block','block']} >
           <Text>
           {props.description}
           </Text>
@@ -41,9 +41,9 @@ const cateOverlay = {
   pos: 'absolute',
   top: 0,
   left: 0,
+  transition: "all .3s",
   bgColor: "transparent",
   bgGradient: "linear(to-b, #00000000, global.secondary)",
-  opacity: 0.3,
 }
 
 const cateItem = {

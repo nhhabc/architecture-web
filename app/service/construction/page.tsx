@@ -87,9 +87,9 @@ const Construction = () => {
           </ListItem>
         </UnorderedList>
       </Flex>
-      <Flex maxW={"1250px"} mx={'auto'}>
-        <Image alt={"service"} p={"10px"} w={"50%"} src='https://kientrucbiscons.vn/wp-content/uploads/2022/09/nha-pho-hien-dai-hp-1-1.jpg'/>
-        <Image alt={"service"} p={"10px"} w={"50%"} src='https://kientrucbiscons.vn/wp-content/uploads/2022/09/Untitled-2-1.jpg'/>
+      <Flex maxW={"1250px"} mx={'auto'} flexDir={['column','column','row','row']}>
+        <Image alt={"service"} sx={image} src='https://kientrucbiscons.vn/wp-content/uploads/2022/09/nha-pho-hien-dai-hp-1-1.jpg'/>
+        <Image alt={"service"} sx={image} src='https://kientrucbiscons.vn/wp-content/uploads/2022/09/Untitled-2-1.jpg'/>
       </Flex>
       <Flex className={"layout"}>
         <Text fontStyle={"italic"} textAlign={'center'} mb={"40px"}>Gần như không có sự khác biệt giữa thực tế và 3D</Text>
@@ -97,8 +97,8 @@ const Construction = () => {
           <ListItem fontWeight={'bold'} fontSize={15}>Quy trình thi công chuyên nghiệp, hướng đến trải nghiệm khách hàng</ListItem>
         </UnorderedList>
       </Flex>
-      <Flex maxW={"1250px"} mx={'auto'}>
-        <Flex w={"44%"} flexDir={'column'} p={"10px"} gap={"20px"}>
+      <Flex maxW={"1250px"} mx={'auto'} flexDir={['column','column','row','row']}>
+        <Flex w={["100%","100%","44%","44%"]} flexDir={'column'} p={"10px"} gap={"20px"}>
           <Text style={{wordSpacing: "7px"}}>Tại Biscons, chúng tôi xây dựng một bộ quy trình tiêu chuẩn kỹ lưỡng, tỉ mỉ để làm “ngôn ngữ làm việc chung” với khách hàng và các nhà thầu phụ, nhân sự kỹ thuật, công nhân, và đảm bảo tính đồng đều về chất lượng – dịch vụ giữa các công trình. Bộ tiêu chuẩn này được xây dựng dựa trên đúc kết kinh nghiệm triển khai dự án trên hàng trăm công trình qua nhiều năm, thấu hiểu tâm lý của khách hàng, các vấn đề trục trặc có thể gặp phải. các tiêu chuẩn về biện pháp thi công và thẩm định đều hướng đến những chuẩn mực cao, đảm bảo tính an toàn, thẩm mỹ trong quá trình thi công. Đây chính điều tạo nên sự khác biệt về chất lượng dự án thi công của Biscons so với mặt bằng chung của thị trường</Text>
           <Box>
             <Image alt="service" src='https://kientrucbiscons.vn/wp-content/uploads/2022/09/301811301_574821151043234_2121650132927564739_n.jpg'/>
@@ -113,7 +113,7 @@ const Construction = () => {
             </Text>
           </Box>
         </Flex>
-        <Flex w={"56%"} flexDir={'column'} p={"10px"} gap={"20px"}>
+        <Flex w={["100%","100%","56%","56%"]} flexDir={'column'} p={"10px"} gap={"20px"}>
           <Box>
             <Image alt="service" src='https://kientrucbiscons.vn/wp-content/uploads/2022/09/301014513_574821114376571_2555818890106952665_n.jpg'/>
           </Box>
@@ -125,9 +125,9 @@ const Construction = () => {
           </Box>
         </Flex>
       </Flex>
-      <Flex maxW={"1250px"} mx={'auto'}>
-        <Image p={"10px"} alt='service' w={"50%"} src='https://kientrucbiscons.vn/wp-content/uploads/2022/11/z3842616919789_25e3a181dd40e7e54fe00cc8449eb388-767x1024.jpg'/>
-        <Image p={"10px"} alt='service' w={"50%"} src='https://kientrucbiscons.vn/wp-content/uploads/2022/11/z3842616906342_62fa525ba63d768733c8fbb1bb4f00c5-767x1024.jpg'/>
+      <Flex maxW={"1250px"} mx={'auto'} flexDir={["column","column","row","row"]}>
+        <Image sx={image} alt='service' src='https://kientrucbiscons.vn/wp-content/uploads/2022/11/z3842616919789_25e3a181dd40e7e54fe00cc8449eb388-767x1024.jpg'/>
+        <Image sx={image} alt='service' src='https://kientrucbiscons.vn/wp-content/uploads/2022/11/z3842616906342_62fa525ba63d768733c8fbb1bb4f00c5-767x1024.jpg'/>
       </Flex>
       <Text fontStyle={"italic"} textAlign={'center'} my={"12px"} fontSize={15}>Lắp đặt hộp kiểm tra điện trở trước khi đấu nối hệ thống chống sét</Text>
       <Flex className={"layout"} fontSize={15}>
@@ -203,3 +203,8 @@ const workingList = [
     ]
   },
 ]
+
+const image = {
+  p: "10px",
+  w: ["100%","100%","50%","50%"]
+}

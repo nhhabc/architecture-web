@@ -1,11 +1,14 @@
 "use client";
 import Header2 from '@/constants/Header2'
 import HeadTitle from '@/constants/service-page/HeadTitle';
+import { useBreakpoint } from '@/hook/useBreakpoint';
 import { Box, Flex, Image, Link, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import React from 'react'
 import Slider from 'react-slick';
 
 const Design = () => {
+  const breakpoint = useBreakpoint(900)
+
   return (
     <>
       <Header2 bgImg='https://kientrucbiscons.vn/wp-content/uploads/2022/03/pc-1-min-20211103082154-min.jpg'
@@ -33,7 +36,7 @@ const Design = () => {
       </Box>
       <Box maxW={"1250px"} mx={'auto'} mb={"30px"}>
         <Box p={"10px"}>
-          <Slider infinite={true} slidesToShow={3} dots={true} swipeToSlide={true}>
+          <Slider infinite={true} slidesToShow={breakpoint ? 1 : 3} dots={true} swipeToSlide={true}>
             {sliderImg.map((img, i) => (
               <Image key={i} alt={`${i}`} src={img.src} />
             ))}

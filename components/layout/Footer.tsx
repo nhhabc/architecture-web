@@ -56,23 +56,23 @@ const Footer = () => {
             Nói với chúng tôi về ngồi nhà của bạn
           </Text>
           <Link href="tel:0357331279">
-          <Flex
-            bg={"#fff"}
-            padding={"16px 25px 16px 25px"}
-            borderRadius={"3px"}
-            borderStyle={"solid"}
-            fontSize={"18px"}
-            fontWeight={700}
-            textTransform={"uppercase"}
-            color={"#000"}
-            _hover={{
-              bg: "#223b5f",
-              color: "#fff",
-            }}
-            cursor={"pointer"}
-          >
-            Liên hệ ngay
-          </Flex>
+            <Flex
+              bg={"#fff"}
+              padding={"16px 25px 16px 25px"}
+              borderRadius={"3px"}
+              borderStyle={"solid"}
+              fontSize={"18px"}
+              fontWeight={700}
+              textTransform={"uppercase"}
+              color={"#000"}
+              _hover={{
+                bg: "#223b5f",
+                color: "#fff",
+              }}
+              cursor={"pointer"}
+            >
+              Liên hệ ngay
+            </Flex>
           </Link>
         </Flex>
       </Box>
@@ -161,15 +161,25 @@ const Footer = () => {
             </Text>
           </Box>
           <Flex sx={textStyle} m={"15px 0"}>
-            Biệt Thự Hiện Đại
+            <Link _hover={{ textDecoration: "none" }} href="/architecture-project/model-villa">
+              Biệt Thự Hiện Đại
+            </Link>
           </Flex>
           <Flex sx={textStyle} mb={5}>
-            Nhà Phố Hiện Đại
+            <Link _hover={{ textDecoration: "none" }} href="/architecture-project/model-house">
+              Nhà Phố Hiện Đại
+            </Link>
           </Flex>
           <Flex sx={textStyle} mb={5}>
-            Văn Phòng
+            <Link _hover={{ textDecoration: "none" }} href="/construction-project/office">
+              Văn Phòng
+            </Link>
           </Flex>
-          <Flex sx={textStyle}>Cafe - Nhà Hàng - Spa - Khách Sạn</Flex>
+          <Flex sx={textStyle}>
+            <Link _hover={{ textDecoration: "none" }} href="/construction-project/cafe-spa-restaurant-hotel">
+              Cafe - Nhà Hàng - Spa - Khách Sạn
+            </Link>
+          </Flex>
         </Flex>
         <Flex flexDir={"column"}>
           <Box borderBottom={"3px solid #13afe5"} w={"fit-content"} pb={"20px"}>
@@ -184,10 +194,11 @@ const Footer = () => {
             </Text>
           </Box>
           <Flex sx={textStyle} m={"15px 0"}>
-            <Text fontWeight={600} mr={2}>
-              Hotline:
-            </Text>{" "}
-            0847466868
+            <Link _hover={{ textDecoration: "none" }} href="tel:0847466868">
+              <Text fontWeight={600} mr={2}>
+                Hotline: 0847466868
+              </Text>
+            </Link>
           </Flex>
           <Flex sx={textStyle} mb={5}>
             <Text fontWeight={600} mr={2}>
@@ -196,7 +207,9 @@ const Footer = () => {
             biscons.jsc@gmail.com
           </Flex>
           <Box>
-            <Image src={logo2.src} alt="gift" />
+            <Link href="https://www.dmca.com/Protection/Status.aspx?ID=ee1e8068-ab9a-41bb-a108-a6a7b67f3740&refurl=https://kientrucbiscons.vn/">
+              <Image src={logo2.src} alt="gift" />
+            </Link>
           </Box>
         </Flex>
       </Grid>

@@ -49,7 +49,7 @@ const InternalOperations = () => {
             desc={item.desc}
             header={item.header}
             img={item.img}
-            href='/recruitment'/>
+            href='/posts'/>
         ))}
       </Grid>
 

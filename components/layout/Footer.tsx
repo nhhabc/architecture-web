@@ -18,7 +18,7 @@ const Footer = () => {
       <Box
         position={"absolute"}
         transform={"translate(-50%, -50%)"}
-        top={["-7%", "-15%", "-15%", "-15%"]}
+        top={["-7%", "-10%", "-10%", "-15%"]}
         left={"50%"}
         bgImage={banner_ft.src}
         w={["95%", "95%", "95%", "80%"]}

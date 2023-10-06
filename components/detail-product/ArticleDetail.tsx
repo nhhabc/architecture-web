@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Input, Link, Select, Text, Textarea } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, Input, Link, Select, Text, Textarea } from "@chakra-ui/react";
 import React from "react";
 import { AiFillHome } from "react-icons/ai";
 import { FaFacebook, FaTwitter, FaUser, FaYoutube } from "react-icons/fa";
@@ -8,8 +8,8 @@ import category2 from "../../public/images/category2.jpg";
 
 const ArticleDetail = () => {
   return (
-    <Flex p={["40px 10px","40px 10px","40px 10px","40px 80px"]} flexDir={["column","column","row","row"]}>
-      <Flex flexDir={"column"} w={["100%","100%","60%","70%"]}>
+    <Flex p={["40px 10px","40px 10px","40px 60px","40px 80px"]} flexDir={["column","column","row","row"]}>
+      <Flex flexDir={"column"} w={["100%","100%","70%","70%"]}>
         <Text
           fontSize={["28px","28px","28px","40px"]}
           fontWeight={700}
@@ -20,8 +20,8 @@ const ArticleDetail = () => {
         >
           COZRUM HOME RESIDENCE
         </Text>
-        <Flex flexDir={["column","column","column","row"]}>
-          <Flex flexDir={"column"} w={["100%","100%","100%","300px"]} mb={[5,5,5,0]}>
+        <Grid templateColumns={["repeat(2, 1fr)","repeat(2, 1fr)","repeat(2, 1fr)","repeat(4, 1fr)"]} gap={2}>
+          <Flex flexDir={"column"}  mb={[5,5,5,0]}>
             <Flex alignItems={"center"}>
               <AiFillHome fontSize={"30px"} />
               <Text sx={text}>Kiểu nhà</Text>
@@ -29,7 +29,7 @@ const ArticleDetail = () => {
             <Text sx={title}>Khách sạn</Text>
           </Flex>
 
-          <Flex flexDir={"column"} w={["100%","100%","100%","300px"]} mb={[5,5,5,0]}>
+          <Flex flexDir={"column"}  mb={[5,5,5,0]}>
             <Flex>
               <FaUser fontSize={"30px"} />
               <Text sx={text}>Chủ đầu tư</Text>
@@ -37,7 +37,7 @@ const ArticleDetail = () => {
             <Text sx={title}></Text>
           </Flex>
 
-          <Flex flexDir={"column"} w={["100%","100%","100%","300px"]} mb={[5,5,5,0]}>
+          <Flex flexDir={"column"}  mb={[5,5,5,0]}>
             <Flex>
               <MdLocationOn fontSize={"30px"} />
               <Text sx={text}>Địa điểm</Text>
@@ -45,16 +45,16 @@ const ArticleDetail = () => {
             <Text sx={title}>Bình Thạnh, TP.Hồ Chí Minh</Text>
           </Flex>
 
-          <Flex flexDir={"column"} w={["100%","100%","100%","300px"]} mb={[5,5,5,0]}>
+          <Flex flexDir={"column"}  mb={[5,5,5,0]}>
             <Flex>
               <BsBuildingFill fontSize={"30px"} />
               <Text sx={text}>Diện tích sàn</Text>
             </Flex>
             <Text sx={title}></Text>
           </Flex>
-        </Flex>
+        </Grid>
       </Flex>
-      <Flex w={["100%","100%","40%","30%"]} ml={[0,0,0,10]} flexDir={"column"}>
+      <Flex w={["100%","100%","30%","30%"]} ml={[0,0,0,10]} flexDir={"column"}>
         <Flex
           w={"100%"}
           h={"260px"}
@@ -80,13 +80,13 @@ const ArticleDetail = () => {
             pos={"absolute"}
             flexDirection={"column"}
             alignItems={"center"}
-            p={"40px 25px"}
             justifyContent={"center"}
+            p={"40px 25px"}
           >
             <Text
               textTransform={"uppercase"}
               color={"white"}
-              fontSize={"28px"}
+              fontSize={["16px","16px","16px","28px"]}
               fontWeight={700}
               lineHeight={"1.3em"}
               mb={"20px"}
@@ -225,7 +225,7 @@ const title = {
 const boxIcon = {
   bg: "#fff",
   borderRadius: "10%",
-  padding: "15px",
+  padding: ["10px","10px","10px","15px"],
   margin: "0 5px",
 };
 const input = {

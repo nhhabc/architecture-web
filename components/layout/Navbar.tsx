@@ -1,3 +1,4 @@
+"use client"
 import { useOutsideHover } from '@/hook/useOutsideHandler'
 import { Flex, Center, Image, Text } from '@chakra-ui/react'
 import Link from 'next/link'

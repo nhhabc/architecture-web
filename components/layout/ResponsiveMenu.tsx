@@ -1,3 +1,4 @@
+"use client"
 import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Box, Center, Flex, Image, Text } from '@chakra-ui/react'
 import menuIco from "../../public/images/menuIco.svg"
 import React, { useRef, useState } from 'react'
